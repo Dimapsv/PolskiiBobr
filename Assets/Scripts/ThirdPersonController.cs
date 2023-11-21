@@ -26,6 +26,7 @@ public class ThirdPersonController : MonoBehaviour
     public float dashTime = 0.2f;
     private bool isDashing = false;
     private float dashTimer = 0f;
+    public bool isDashingUpgraded = false;
 
 
     //camera
@@ -76,7 +77,7 @@ public class ThirdPersonController : MonoBehaviour
     private void Update()
     {
         // Check for input and initiate dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && isDashingUpgraded)
         {
             StartCoroutine(Dash());
         }
