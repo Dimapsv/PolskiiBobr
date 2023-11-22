@@ -29,6 +29,14 @@ public class ThirdPersonController : MonoBehaviour
     public bool isDashingUpgraded = false;
 
 
+    //push
+    public float radiusPush;
+    public float pushTime = 0.2f;
+    private float pushTimer = 0f;
+    public bool isPushing = false;
+    public float forcePush;
+    public bool isPushingUpgraded = false;
+
     //camera
     [SerializeField]
     private Camera playerCamera;
@@ -81,6 +89,7 @@ public class ThirdPersonController : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+        
 
         // Update dash timer
         if (isDashing)
@@ -157,6 +166,22 @@ public class ThirdPersonController : MonoBehaviour
             rb.MovePosition(Vector3.Lerp(startPosition, endPosition, dashTimer / dashTime));
             yield return null;
         }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Rigidbody rigidbody = other.GetComponent<Rigidbody>();
+
+            if (rigidbody != null)
+            {
+                Vector3 direction = (other.transform.position - transform.position).normalized;
+                rigidbody.AddForce(direction * forcePush, ForceMode.Impulse);
+            }
+        }
+
     }
 
 }

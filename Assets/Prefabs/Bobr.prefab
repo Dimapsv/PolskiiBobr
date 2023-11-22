@@ -68,6 +68,14 @@ MonoBehaviour:
   movementForce: 1
   jumpForce: 13
   maxSpeed: 12
+  dashDistance: 12
+  dashTime: 0.2
+  isDashingUpgraded: 0
+  radiusPush: 0
+  pushTime: 0.2
+  isPushing: 0
+  forcePush: 10
+  isPushingUpgraded: 0
   playerCamera: {fileID: 0}
 --- !u!65 &2188232477006078763
 BoxCollider:
