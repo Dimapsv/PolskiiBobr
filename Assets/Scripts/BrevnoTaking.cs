@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class BrevnoTaking : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
                 FindObjectOfType<GameManager>().brevnoIsTaked = true;
+                Destroy(GameObject.Find("Visable(Clone)"));
                 Destroy(this.gameObject);
-           
+                
         }
 
     }

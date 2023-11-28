@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     private Transform spawnPointBrevno;
     public bool brevnoIsTaked;
 
+    public GameObject visable;
+
 
     private void Awake()
     {
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         spawnPointBrevno = brevnoSpawnPoints[Random.Range(0, brevnoSpawnPoints.Length)];
         Instantiate(brevno, spawnPointBrevno);
+        Instantiate(visable, spawnPointBrevno);
         brevnoIsTaked = false;
         TextBrevnoUpdate();
     }
@@ -33,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void TextBrevnoUpdate()
     {
-        brevnoCountText.text = "" + brevnoIsDelivered;
+        brevnoCountText.text = "" + brevnoIsDelivered + "/10";
     }
     
 
