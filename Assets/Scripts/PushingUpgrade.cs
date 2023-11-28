@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dashing : MonoBehaviour
+public class PushingUpgrade : MonoBehaviour
 {
-    //upgrading of dashing
+    //upgrading of pushing
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            FindObjectOfType<ThirdPersonController>().isDashingUpgraded = true;
+            FindObjectOfType<ThirdPersonController>().isPushingUpgraded = true;
             Destroy(this.gameObject);
         }
-            
+
     }
 }

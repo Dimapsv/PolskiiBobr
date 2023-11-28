@@ -36,6 +36,7 @@ public class ThirdPersonController : MonoBehaviour
     public bool isPushing = false;
     public float forcePush;
     public bool isPushingUpgraded = false;
+    public bool isPushingButtonPressed = false;
 
     //camera
     [SerializeField]
@@ -89,7 +90,15 @@ public class ThirdPersonController : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-        
+
+        if (Input.GetKey(KeyCode.F))
+        {
+            isPushingButtonPressed = true;
+        }
+        else
+        {
+            isPushingButtonPressed = false;
+        }
 
         // Update dash timer
         if (isDashing)
@@ -169,19 +178,6 @@ public class ThirdPersonController : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            Rigidbody rigidbody = other.GetComponent<Rigidbody>();
-
-            if (rigidbody != null)
-            {
-                Vector3 direction = (other.transform.position - transform.position).normalized;
-                rigidbody.AddForce(direction * forcePush, ForceMode.Impulse);
-            }
-        }
-
-    }
+    
 
 }

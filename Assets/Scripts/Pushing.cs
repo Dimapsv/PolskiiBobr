@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Pushing : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //realisation of pushing
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        
+        if (other.CompareTag("Enemy") && FindObjectOfType<ThirdPersonController>().isPushingButtonPressed == true && FindObjectOfType<ThirdPersonController>().isPushingUpgraded == true)
+        {
+            Rigidbody rigidbody = other.GetComponent<Rigidbody>();
+
+            if (rigidbody != null)
+            {
+                Vector3 direction = (other.transform.position - transform.position).normalized;
+                rigidbody.AddForce(direction * FindObjectOfType<ThirdPersonController>().forcePush, ForceMode.Impulse);
+            }
+        }
+
     }
 }
