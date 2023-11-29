@@ -8,7 +8,7 @@ public class Pushing : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Enemy") || other.CompareTag("PolandDorf") && FindObjectOfType<ThirdPersonController>().isPushingButtonPressed == true && FindObjectOfType<ThirdPersonController>().isPushingUpgraded == true)
+        if (other.CompareTag("Enemy")  && FindObjectOfType<ThirdPersonController>().isPushingButtonPressed == true && FindObjectOfType<ThirdPersonController>().isPushingUpgraded == true)
         {
             Rigidbody rigidbody = other.GetComponent<Rigidbody>();
 
@@ -18,6 +18,18 @@ public class Pushing : MonoBehaviour
                 rigidbody.AddForce(direction * FindObjectOfType<ThirdPersonController>().forcePush, ForceMode.Impulse);
             }
         }
+        //решить эту дичь с кодом
 
+
+        if (other.CompareTag("PolandDorf") && FindObjectOfType<ThirdPersonController>().isPushingButtonPressed == true && FindObjectOfType<ThirdPersonController>().isPushingUpgraded == true)
+        {
+            Rigidbody rigidbody = other.GetComponent<Rigidbody>();
+
+            if (rigidbody != null)
+            {
+                Vector3 direction = (other.transform.position - transform.position).normalized;
+                rigidbody.AddForce(direction * FindObjectOfType<ThirdPersonController>().forcePush, ForceMode.Impulse);
+            }
+        }
     }
 }

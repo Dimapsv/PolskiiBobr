@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 0
   m_FogColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.005
+  m_FogDensity: 0.007
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -1853,7 +1853,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420657117}
-  m_LocalRotation: {x: 0.19424808, y: -0.000000016878642, z: 0.0000000033423064, w: 0.98095244}
+  m_LocalRotation: {x: 0.19424808, y: 0.000000016878642, z: -0.0000000033423064, w: 0.98095244}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4895,7 +4895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -431, y: 18}
+  m_AnchoredPosition: {x: -477, y: 18}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404706407
@@ -6531,7 +6531,7 @@ MonoBehaviour:
   brevnoIsTaked: 0
   isTakedBrevnoIndicator: {fileID: 1441944914}
   visable: {fileID: 7570244217234779325, guid: c23785cf0afa03f4890fc21e5f58fb23, type: 3}
-  isVisableUpgraded: 0
+  isVisableUpgraded: 1
   pauseMenuPanel: {fileID: 1190347238}
   isPaused: 0
   helpMenuPanel: {fileID: 1644183084}
@@ -8473,6 +8473,14 @@ PrefabInstance:
       objectReference: {fileID: 1332440506}
     - target: {fileID: 2188232477006078762, guid: 9511da91fc14b1d48adfb71cffb4e506, type: 3}
       propertyPath: isDashingUpgraded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188232477006078762, guid: 9511da91fc14b1d48adfb71cffb4e506, type: 3}
+      propertyPath: isPushingUpgraded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188232477006078762, guid: 9511da91fc14b1d48adfb71cffb4e506, type: 3}
+      propertyPath: isPushingButtonPressed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8479015563884749160, guid: 9511da91fc14b1d48adfb71cffb4e506, type: 3}
