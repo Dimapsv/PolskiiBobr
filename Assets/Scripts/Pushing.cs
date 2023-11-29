@@ -8,7 +8,7 @@ public class Pushing : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Enemy") && FindObjectOfType<ThirdPersonController>().isPushingButtonPressed == true && FindObjectOfType<ThirdPersonController>().isPushingUpgraded == true)
+        if (other.CompareTag("Enemy") || other.CompareTag("PolandDorf") && FindObjectOfType<ThirdPersonController>().isPushingButtonPressed == true && FindObjectOfType<ThirdPersonController>().isPushingUpgraded == true)
         {
             Rigidbody rigidbody = other.GetComponent<Rigidbody>();
 
