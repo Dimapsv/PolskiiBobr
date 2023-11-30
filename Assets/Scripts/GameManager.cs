@@ -21,7 +21,13 @@ public class GameManager : MonoBehaviour
 
     //Maze
     public bool isMazed = false;
-    
+    public Transform[] chestSpawnPoints;
+    public Transform[] keySpawnPoints;
+    private Transform chestSpawnPoint;
+    private Transform keySpawnPoint;
+    public GameObject chest;
+    public GameObject keySawmill;
+    public bool isKeySawmillTaked;
 
     // PauseMenu
     public GameObject pauseMenuPanel;
@@ -35,17 +41,21 @@ public class GameManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         helpMenuPanel.SetActive(false);
         isTakedBrevnoIndicator.SetActive(false);
+        SpawnSawmillKey();
+        SpawnChest();
     }
 
     //Maze
     public void SpawnSawmillKey()
     {
-
+        keySpawnPoint = keySpawnPoints[Random.Range(0, keySpawnPoints.Length)];
+        Instantiate(keySawmill, keySpawnPoint);
     }
 
     public void SpawnChest()
     {
-
+        chestSpawnPoint = chestSpawnPoints[Random.Range(0, chestSpawnPoints.Length)];
+        Instantiate(chest, chestSpawnPoint);
     }
 
     public void MazeEnemyDelete()
