@@ -1,19 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class MazeCameraSwapper : MonoBehaviour
 {
-    public GameObject cameraMain;
-    public GameObject cameraMaze;
+    
+
+    [SerializeField] GameObject mainCamera;
+    [SerializeField] GameObject mazeCamera;
+    
+    
+    //public GameObject cameraMaze;
+
+
     
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("Player"))
         {
-            cameraMain.SetActive(false);
-            cameraMaze.SetActive(true);
-           
+            mainCamera.SetActive(false);
+            mazeCamera.SetActive(true);
+
         }
 
     }
@@ -22,8 +31,8 @@ public class MazeCameraSwapper : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            cameraMain.SetActive(true);
-            cameraMaze.SetActive(false);
+            mainCamera.SetActive(true);
+            mazeCamera.SetActive(false);
 
         }
 
