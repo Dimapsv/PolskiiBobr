@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     public GameObject visable;
     public bool isVisableUpgraded = false;
 
-
+    //Maze
+    public bool isMazed = false;
+    
 
     // PauseMenu
     public GameObject pauseMenuPanel;
@@ -35,7 +37,23 @@ public class GameManager : MonoBehaviour
         isTakedBrevnoIndicator.SetActive(false);
     }
 
+    //Maze
+    public void SpawnSawmillKey()
+    {
 
+    }
+
+    public void SpawnChest()
+    {
+
+    }
+
+    public void MazeEnemyDelete()
+    {
+        
+    }
+
+    //Brevno
     public void SpawnBrevno()
     {
         spawnPointBrevno = brevnoSpawnPoints[Random.Range(0, brevnoSpawnPoints.Length)];
@@ -51,6 +69,8 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
+        
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenu();

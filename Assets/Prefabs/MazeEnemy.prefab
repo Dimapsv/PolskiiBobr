@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 1553290756622760851}
   - component: {fileID: 3031780338486619596}
   m_Layer: 0
-  m_Name: Enemy_Lvl_3
-  m_TagString: Enemy
+  m_Name: MazeEnemy
+  m_TagString: MazeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9774305d50c9a694baba1aa0700b404c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 11
+  speed: 5
 --- !u!114 &1553290756622760844
 MonoBehaviour:
   m_ObjectHideFlags: 0

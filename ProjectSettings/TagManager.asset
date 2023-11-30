@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - PolandDorf
+  - MazeEnemy
   layers:
   - Default
   - TransparentFX
