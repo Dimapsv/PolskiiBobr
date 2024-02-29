@@ -17,15 +17,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b63ca9c7bc00f24b81b6cb48095b9a9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b63ca9c7bc00f24b81b6cb48095b9a9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b63ca9c7bc00f24b81b6cb48095b9a9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b63ca9c7bc00f24b81b6cb48095b9a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -78,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 3300000, guid: 6b63ca9c7bc00f24b81b6cb48095b9a9, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: 73f65eaba834ed64ca6bb286a65c7f7b, type: 3}
+      objectReference: {fileID: 2534964839176971238, guid: 6651e82f96313234b96a4b51281a96d9, type: 3}
     m_RemovedComponents:
     - {fileID: 6400000, guid: 6b63ca9c7bc00f24b81b6cb48095b9a9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6b63ca9c7bc00f24b81b6cb48095b9a9, type: 3}
@@ -87,18 +87,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6b63ca9c7bc00f24b81b6cb48095b9a9, type: 3}
   m_PrefabInstance: {fileID: 982478484422143084}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2817192546494849316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982478484422240972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 398ea7b063f2c724f9863081e7d893e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &178874841971736165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112,3 +100,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22256002, y: 0.3082546, z: 0.17287962}
   m_Center: {x: -0.054613687, y: -0.058636, z: -0.0099301785}
+--- !u!114 &2817192546494849316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982478484422240972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398ea7b063f2c724f9863081e7d893e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

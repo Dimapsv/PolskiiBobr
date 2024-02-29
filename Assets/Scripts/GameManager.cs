@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         helpMenuPanel.SetActive(false);
         isTakedBrevnoIndicator.SetActive(false);
         SpawnSawmillKey();
-        SpawnChest();
+        //SpawnChest();
     }
 
     //Maze
