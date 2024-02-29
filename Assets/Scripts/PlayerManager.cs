@@ -26,7 +26,7 @@ public class PlayerManager : MonoBehaviour
 
         if(gameOver)
         {
-            SceneManager.LoadScene("TestScene");
+            SceneManager.LoadScene("Main Scene");
         }
     }
 
