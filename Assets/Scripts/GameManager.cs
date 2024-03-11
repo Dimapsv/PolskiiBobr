@@ -26,13 +26,17 @@ public class GameManager : MonoBehaviour
     private Transform chestSpawnPoint;
     private Transform keySpawnPoint;
     public GameObject chest;
-    public GameObject keySawmill;
-    public bool isKeySawmillTaked;
+    public GameObject keyPolandDorf;
+    
 
     // PauseMenu
     public GameObject pauseMenuPanel;
     public bool isPaused;
     public GameObject helpMenuPanel;
+
+    //Keys
+    public bool isKeyPolandDorf;
+    public bool isKeyLesopilka;
 
     private void Awake()
     {
@@ -41,15 +45,15 @@ public class GameManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         helpMenuPanel.SetActive(false);
         isTakedBrevnoIndicator.SetActive(false);
-        SpawnSawmillKey();
+        SpawnKeyPolandDorf();
         //SpawnChest();
     }
 
     //Maze
-    public void SpawnSawmillKey()
+    public void SpawnKeyPolandDorf()
     {
         keySpawnPoint = keySpawnPoints[Random.Range(0, keySpawnPoints.Length)];
-        Instantiate(keySawmill, keySpawnPoint);
+        Instantiate(keyPolandDorf, keySpawnPoint);
     }
 
     public void SpawnChest()

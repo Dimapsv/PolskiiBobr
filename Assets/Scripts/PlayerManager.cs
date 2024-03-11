@@ -12,14 +12,14 @@ public class PlayerManager : MonoBehaviour
     public GameObject bloodOverlay;
 
 
+
     void Start()
     {
         playerHealth = 5;
         gameOver = false;
-
+        
     }
 
-    
     void Update()
     {
         playerHealthText.text = "" + playerHealth;
