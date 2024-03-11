@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private Transform keySpawnPoint;
     public GameObject chest;
     public GameObject keyPolandDorf;
+    public GameObject keyLesopilka;
     
 
     // PauseMenu
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour
     //Keys
     public bool isKeyPolandDorf;
     public bool isKeyLesopilka;
+    public GameObject polandDorfFance;
+    public GameObject lesopilkaFance;
 
     private void Awake()
     {
@@ -84,7 +87,6 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenu();
