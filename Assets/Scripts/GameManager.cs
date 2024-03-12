@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //brevno
     public Transform[] brevnoSpawnPoints;
     public int brevnoIsDelivered;
     public TextMeshProUGUI brevnoCountText;
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
     private Transform spawnPointBrevno;
     public bool brevnoIsTaked;
     public GameObject isTakedBrevnoIndicator;
+
+    //Key indicator
+    public GameObject isTakedKey;
 
     // visable upgrade
     public GameObject visable;
