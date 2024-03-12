@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     private Transform chestSpawnPoint;
     private Transform keySpawnPoint;
     public GameObject chest;
-    public GameObject keyPolandDorf;
     public GameObject keyLesopilka;
     
 
@@ -36,10 +35,10 @@ public class GameManager : MonoBehaviour
     public GameObject helpMenuPanel;
 
     //Keys
-    public bool isKeyPolandDorf;
+    
     public bool isKeyLesopilka;
-    public GameObject polandDorfFance;
-    public GameObject lesopilkaFance;
+    
+    
 
     private void Awake()
     {
@@ -56,7 +55,7 @@ public class GameManager : MonoBehaviour
     public void SpawnKeyPolandDorf()
     {
         keySpawnPoint = keySpawnPoints[Random.Range(0, keySpawnPoints.Length)];
-        Instantiate(keyPolandDorf, keySpawnPoint);
+        Instantiate(keyLesopilka, keySpawnPoint);
     }
 
     public void SpawnChest()

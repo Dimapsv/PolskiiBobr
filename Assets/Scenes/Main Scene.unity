@@ -11536,7 +11536,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657536068}
-  m_LocalRotation: {x: 0.16482206, y: -0.0000000240007, z: 0.0000000040106976, w: 0.98632336}
+  m_LocalRotation: {x: 0.16482206, y: 0.000000024000691, z: -0.0000000040106958, w: 0.98632336}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11895,36 +11895,48 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7778
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7778
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7778
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 115.65
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.42
+      value: 5.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.72
+      value: 268.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.6705296
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.67052966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.22447728
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.22447725
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -11932,7 +11944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -37.019
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8fb1f983477f2864d82f98e59325c313, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11975,6 +11987,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5378418, y: 14.44733, z: 6.266242}
   m_Center: {x: 0.006362915, y: -0.72544813, z: -0.08648277}
+--- !u!114 &1735323083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735323079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a417d9574303e45af33369ab417dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1738413702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15167,15 +15191,11 @@ MonoBehaviour:
   - {fileID: 169726300}
   - {fileID: 1142236433}
   chest: {fileID: 3133018789998918038, guid: 2b9ebbef575259f449df971eb76a1452, type: 3}
-  keyPolandDorf: {fileID: 5453640286899393891, guid: 863dbd66d3effb3449c084d7b976a7d4, type: 3}
-  keyLesopilka: {fileID: 0}
+  keyLesopilka: {fileID: 5453640286899393891, guid: 863dbd66d3effb3449c084d7b976a7d4, type: 3}
   pauseMenuPanel: {fileID: 1190347238}
   isPaused: 0
   helpMenuPanel: {fileID: 1644183084}
-  isKeyPolandDorf: 0
   isKeyLesopilka: 0
-  polandDorfFance: {fileID: 1735323079}
-  lesopilkaFance: {fileID: 0}
 --- !u!4 &2105037885
 Transform:
   m_ObjectHideFlags: 0
