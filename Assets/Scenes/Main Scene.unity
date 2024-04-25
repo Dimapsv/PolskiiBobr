@@ -2870,7 +2870,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475455893}
-  m_LocalRotation: {x: 0.19885808, y: 0.000000018853113, z: -0.000000003825496, w: 0.98002833}
+  m_LocalRotation: {x: 0.19885808, y: -0.000000018853116, z: 0.0000000038254964, w: 0.98002833}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9355,7 +9355,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332440504}
-  m_LocalRotation: {x: 0.19885808, y: 0.000000034763435, z: -0.000000007053867, w: 0.98002833}
+  m_LocalRotation: {x: 0.19885808, y: -0.000000034763435, z: 0.000000007053867, w: 0.98002833}
   m_LocalPosition: {x: 34.67649, y: 8.0836315, z: 214.15932}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12067,7 +12067,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657536068}
-  m_LocalRotation: {x: 0.16482206, y: 0.000000024000691, z: -0.0000000040106958, w: 0.98632336}
+  m_LocalRotation: {x: 0.16482206, y: -0.0000000240007, z: 0.0000000040106976, w: 0.98632336}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15790,6 +15790,7 @@ MonoBehaviour:
   brevno: {fileID: 982478484422240972, guid: b152e298a1bb9ed4c85278cd47e99821, type: 3}
   brevnoIsTaked: 0
   isTakedBrevnoIndicator: {fileID: 1441944914}
+  isTakedKey: {fileID: 0}
   visable: {fileID: 7570244217234779325, guid: c23785cf0afa03f4890fc21e5f58fb23, type: 3}
   isVisableUpgraded: 1
   isMazed: 0
