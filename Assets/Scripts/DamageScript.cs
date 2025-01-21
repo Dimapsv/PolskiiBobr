@@ -5,15 +5,24 @@ using UnityEngine;
 public class DamageScript : MonoBehaviour
 {
     public int damageCount = 1;
+    public PlayerManager playerManager;
+    
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    StartCoroutine(FindObjectOfType<PlayerManager>().Damage(damageCount));
-    //}
-
+    private void Start()
+    {
+        playerManager = FindObjectOfType<PlayerManager>();
+    }
+        
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-            StartCoroutine(FindObjectOfType<PlayerManager>().Damage(damageCount));
+            playerManager.damageTaken = true;
+            StartCoroutine(playerManager.Damage(damageCount));
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+            playerManager.damageTaken = false;
     }
 }

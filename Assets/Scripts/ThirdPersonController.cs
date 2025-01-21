@@ -172,7 +172,8 @@ public class ThirdPersonController : MonoBehaviour
         // Perform the dash
         while (isDashing)
         {
-            rb.MovePosition(Vector3.Lerp(startPosition, endPosition, dashTimer / dashTime));
+            rb.AddForce(Vector3.Lerp(startPosition, endPosition, dashTimer / dashTime), ForceMode.Impulse);
+            //rb.MovePosition();
             yield return null;
         }
     }

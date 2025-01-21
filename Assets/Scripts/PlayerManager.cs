@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class PlayerManager : MonoBehaviour
 {
     public int playerHealth;
+    public bool damageTaken;
     public static bool gameOver;
     public TextMeshProUGUI playerHealthText;
     public GameObject bloodOverlay;
+
 
 
 
@@ -17,7 +19,9 @@ public class PlayerManager : MonoBehaviour
     {
         playerHealth = 5;
         gameOver = false;
-        
+        damageTaken = false;
+
+
     }
 
     void Update()
@@ -32,13 +36,18 @@ public class PlayerManager : MonoBehaviour
 
     public IEnumerator Damage(int damageCount)
     {
-        bloodOverlay.SetActive(true);
-        playerHealth -= damageCount;
-        if (playerHealth <= 0)
-            gameOver = true;
+        while (damageTaken)
+        {
+            bloodOverlay.SetActive(true);
+            playerHealth -= damageCount;
+            if (playerHealth <= 0)
+                gameOver = true;
 
-        yield return new WaitForSeconds(1f);
-        bloodOverlay.SetActive(false);
+            yield return new WaitForSeconds(2f);
+            bloodOverlay.SetActive(false);
+
+        }
+        
 
     }
 }
