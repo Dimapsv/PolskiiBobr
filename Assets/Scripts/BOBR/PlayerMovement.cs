@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    public bool inConversation; //dialogue movement = 0
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
