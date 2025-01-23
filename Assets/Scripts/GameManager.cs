@@ -55,6 +55,16 @@ public class GameManager : MonoBehaviour
         //SpawnChest();
     }
 
+    private void OnEnable()
+    {
+        PlayerManager.OnGameOver.AddListener(GameOver);
+    }
+
+    private void OnDisable()
+    {
+        PlayerManager.OnGameOver.RemoveListener(GameOver);
+    }
+
     //Maze
     public void SpawnKeyPolandDorf()
     {
@@ -136,6 +146,11 @@ public class GameManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         isPaused = false;
 
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Main Scene");
     }
 
 

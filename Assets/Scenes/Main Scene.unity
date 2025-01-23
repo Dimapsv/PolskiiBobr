@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 219268745}
   - component: {fileID: 219268744}
   m_Layer: 5
-  m_Name: RedOverlay
+  m_Name: BloodOVerlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3143,7 +3143,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475455893}
-  m_LocalRotation: {x: 0.19885814, y: 1e-45, z: -0, w: 0.9800283}
+  m_LocalRotation: {x: 0.19885814, y: 3.0171358e-24, z: -8.1470857e-25, w: 0.9800283}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3975,8 +3975,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 5
   damageTaken: 0
-  playerHealthText: {fileID: 1817388270}
-  bloodOverlay: {fileID: 219268742}
 --- !u!4 &533573403
 Transform:
   m_ObjectHideFlags: 0
@@ -5171,6 +5169,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c086a5c6409cb34c9b069d2949b9860, type: 3}
+--- !u!1 &640153559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 640153560}
+  - component: {fileID: 640153561}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &640153560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640153559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1394802175}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &640153561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640153559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b04c3b6622bc24ea12e349ed28708c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthText: {fileID: 1817388270}
+  bloodOverlay: {fileID: 219268742}
 --- !u!65 &644909153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6850,7 +6894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1920969338805188262, guid: 5b55371babc1dcb47a4c4b1ba5f9bcac, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b55371babc1dcb47a4c4b1ba5f9bcac, type: 3}
@@ -11705,6 +11749,7 @@ Transform:
   m_Children:
   - {fileID: 533573403}
   - {fileID: 2105037885}
+  - {fileID: 640153560}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14001,7 +14046,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657536068}
-  m_LocalRotation: {x: 0.16482209, y: 0.000000018974214, z: -0.0000000031707346, w: 0.98632336}
+  m_LocalRotation: {x: 0.16482209, y: 0.000000015303554, z: -0.00000000255734, w: 0.98632336}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15170,7 +15215,7 @@ GameObject:
   - component: {fileID: 1817388271}
   - component: {fileID: 1817388270}
   m_Layer: 5
-  m_Name: Helth
+  m_Name: PlayerHealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18037,7 +18082,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113804538}
-  m_LocalRotation: {x: 0.23298495, y: 0.0000000148633115, z: -0.000000003560923, w: 0.97248036}
+  m_LocalRotation: {x: 0.23298495, y: 7.09837e-22, z: -1.6059276e-22, w: 0.97248036}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
