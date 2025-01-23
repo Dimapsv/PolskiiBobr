@@ -15,14 +15,12 @@ public class PlayerManager : MonoBehaviour
 
 
     public int playerHealth;
-
-    public bool damageTaken;
-    public static bool gameOver;
-    
+       
 
     private void OnEnable()
     {
         DamageScript.OnDealingDamage.AddListener(TakeDamage);
+        Health.OnImprovingHealth.AddListener(TakeHealth);
     }
 
     private void OnDisable()
@@ -34,9 +32,7 @@ public class PlayerManager : MonoBehaviour
     {
         playerHealth = 5;
         OnHealthValueChanged.Invoke(playerHealth);
-        gameOver = false;
-        damageTaken = false;
-
+        
     }
 
     void Update()
@@ -59,20 +55,12 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    //public IEnumerator Damage(int damageCount)
-    //{
-    //    while (damageTaken)
-    //    {
-    //        bloodOverlay.SetActive(true);
-    //        playerHealth -= damageCount;
-    //        if (playerHealth <= 0)
-    //            gameOver = true;
-
-    //        yield return new WaitForSeconds(2f);
-    //        bloodOverlay.SetActive(false);
-
-    //    }
+    private void TakeHealth(int healthValueChange)
+    {
+        playerHealth += healthValueChange;
+        OnHealthValueChanged.Invoke(playerHealth);
+    }
 
 
-    //}
+    
 }
