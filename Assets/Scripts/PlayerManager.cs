@@ -10,7 +10,9 @@ public class PlayerManager : MonoBehaviour
 {
     
     public static UnityEvent<int> OnHealthValueChanged = new UnityEvent<int>();
+    public static UnityEvent OnDamageTaked = new UnityEvent();
     public static UnityEvent OnGameOver = new UnityEvent();
+
 
     public int playerHealth;
 
@@ -49,6 +51,7 @@ public class PlayerManager : MonoBehaviour
         playerHealth -= healtValueChange;
 
         OnHealthValueChanged.Invoke(playerHealth);
+        OnDamageTaked.Invoke();
 
         if (playerHealth <= 0)
         {
