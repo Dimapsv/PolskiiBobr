@@ -42,6 +42,10 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField]
     private Camera playerCamera;
 
+    //interact
+    [SerializeField] float talkDistance = 10f;
+    public bool inConversation; //dialogue movement = 0
+
     private void Awake()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -53,12 +57,16 @@ public class ThirdPersonController : MonoBehaviour
         playerActionsAsset.Player.Jump.started += DoJump;
         move = playerActionsAsset.Player.Move;
         playerActionsAsset.Player.Enable();
+        DialogueManager.OnDialogueStart.AddListener(JoinConversation);
+        DialogueManager.OnDialogueStop.AddListener(LeaveConversation);
     }
 
     private void OnDisable()
     {
         playerActionsAsset.Player.Jump.started -= DoJump;
         playerActionsAsset.Player.Disable();
+        DialogueManager.OnDialogueStart.RemoveListener(JoinConversation);
+        DialogueManager.OnDialogueStop.RemoveListener(LeaveConversation);
     }
 
     private void FixedUpdate()
@@ -91,13 +99,18 @@ public class ThirdPersonController : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isPushingButtonPressed = true;
         }
         else
         {
             isPushingButtonPressed = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E)) //interact
+        {
+            Interact();
         }
 
         // Update dash timer
@@ -112,6 +125,37 @@ public class ThirdPersonController : MonoBehaviour
                 dashTimer = 0f;
             }
         }
+    }
+
+    //Interact
+    public void Interact()
+    {
+        if (inConversation)
+        {
+            DialogueManager.instance.SkipLine();
+        }
+        else
+        {
+            if (Physics.Raycast(new Ray(transform.position, transform.forward), out RaycastHit hitInfo, talkDistance))
+            {
+                Debug.Log(hitInfo.collider.gameObject.name);
+                if (hitInfo.collider.gameObject.TryGetComponent(out NPC npc))
+                {
+                    Debug.Log("Interact");
+                    DialogueManager.instance.StartDialogue(npc.dialogue);
+                }
+
+            }
+        }
+    }
+    void JoinConversation()
+    {
+        inConversation = true;
+    }
+
+    void LeaveConversation()
+    {
+        inConversation = false;
     }
 
     private void LookAt()
