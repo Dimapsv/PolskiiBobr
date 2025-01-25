@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Health : MonoBehaviour
+public class Item : MonoBehaviour
 {
-    [SerializeField] private int healthCount;
+    public InteractableItemAsset item;
 
-    public static UnityEvent<int> OnImprovingHealth = new UnityEvent<int>();
+    public static UnityEvent<InteractableItemAsset> OnItemTaked = new UnityEvent<InteractableItemAsset>();
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            OnImprovingHealth.Invoke(healthCount);
+            OnItemTaked.Invoke(item);
             Destroy(this.gameObject);
         }
 
     }
+
 }
+

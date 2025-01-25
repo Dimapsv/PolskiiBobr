@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb6333995c15e4a4a8681deb12d6ac28, type: 3}
-  m_Name: NewDial
+  m_Script: {fileID: 11500000, guid: 07d3119dd541e614b834391363739d76, type: 3}
+  m_Name: Health
   m_EditorClassIdentifier: 
-  nameOfNps: Lenya
-  dialogue:
-  - Hey
-  - 'How Are you '
-  - 'What do you do '
+  itemType: 1
+  itemName: Health
+  icon: {fileID: 21300000, guid: 7d7ae61f7abd7f0469d72ef395acecc5, type: 3}
+  countOfTree: 0
+  valueOfHealth: 1
+  typeOfAblity: 0

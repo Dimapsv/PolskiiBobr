@@ -20,12 +20,13 @@ public class PlayerManager : MonoBehaviour
     private void OnEnable()
     {
         DamageScript.OnDealingDamage.AddListener(TakeDamage);
-        Health.OnImprovingHealth.AddListener(TakeHealth);
+        Item.OnItemTaked.AddListener(GetItem);
     }
 
     private void OnDisable()
     {
         DamageScript.OnDealingDamage.RemoveListener(TakeDamage);
+        Item.OnItemTaked.RemoveListener(GetItem);
     }
 
     void Start()
@@ -40,6 +41,24 @@ public class PlayerManager : MonoBehaviour
         
 
         
+    }
+
+    public void GetItem(InteractableItemAsset item)
+    {
+        string itemType = item.itemType.ToString();
+        switch (itemType)
+        {
+
+            case "Tree":
+                Debug.Log("It's Tree");
+                break;
+
+            case "Health":
+                Debug.Log("Health");
+                TakeHealth(item.valueOfHealth);
+                break;
+        }
+            
     }
 
     private void TakeDamage(int healtValueChange)
