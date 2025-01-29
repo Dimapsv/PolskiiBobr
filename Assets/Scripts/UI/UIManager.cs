@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         bloodOverlay.enabled = false;
-        keyOfLesopilkaImage.enabled = false;
+        
 
     }
 
@@ -66,10 +66,13 @@ public class UIManager : MonoBehaviour
 
     public void UIKeyOfLesopilkaUpdate(bool isHasKey)
     {
-        SpawnChild(inventoryPanel.transform,keyOfLesopilkaImage);
-        keyOfLesopilkaImage.enabled = isHasKey;
+        
         if (isHasKey)
+        {
+            SpawnChild(inventoryPanel.transform, keyOfLesopilkaImage);
             OnWriteMessage.Invoke(0); // id = 0 - lesopilka opened
+        }
+            
     }
 
 
