@@ -8,16 +8,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //brevno
-    public Transform[] brevnoSpawnPoints;
+    
     public int brevnoIsDelivered;
     public TextMeshProUGUI brevnoCountText;
-    public GameObject brevno;
-    private Transform spawnPointBrevno;
     public bool brevnoIsTaked;
     public GameObject isTakedBrevnoIndicator;
 
-    //Key indicator
-    public GameObject isTakedKey;
+    //lesopilka
+    public GameObject branchOfLesopilka;
 
     // visable upgrade
     public GameObject visable;
@@ -38,54 +36,37 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     public GameObject helpMenuPanel;
 
-    //Keys
-    
-    public bool isKeyLesopilka;
     
     
 
     private void Awake()
     {
         brevnoIsDelivered = 0;
-        SpawnBrevno();
         pauseMenuPanel.SetActive(false);
         helpMenuPanel.SetActive(false);
         isTakedBrevnoIndicator.SetActive(false);
-        SpawnKeyPolandDorf();
+        
         //SpawnChest();
     }
 
-    //Maze
-    public void SpawnKeyPolandDorf()
+    private void OnEnable()
     {
-        keySpawnPoint = keySpawnPoints[Random.Range(0, keySpawnPoints.Length)];
-        Instantiate(keyLesopilka, keySpawnPoint);
+        PlayerManager.OnGameOver.AddListener(GameOver);
+
+        PlayerManager.OnKeyOfLesopilkaHasChanged.AddListener(OpenLesopilka);
     }
 
-    public void SpawnChest()
+    private void OnDisable()
     {
-        chestSpawnPoint = chestSpawnPoints[Random.Range(0, chestSpawnPoints.Length)];
-        Instantiate(chest, chestSpawnPoint);
+        PlayerManager.OnGameOver.RemoveListener(GameOver);
+
+        PlayerManager.OnKeyOfLesopilkaHasChanged.RemoveListener(OpenLesopilka);
     }
 
-    public void MazeEnemyDelete()
-    {
-        
-    }
+    
 
     //Brevno
-    public void SpawnBrevno()
-    {
-        spawnPointBrevno = brevnoSpawnPoints[Random.Range(0, brevnoSpawnPoints.Length)];
-        Instantiate(brevno, spawnPointBrevno);
-        if (isVisableUpgraded == true)
-        {
-            Instantiate(visable, spawnPointBrevno);
-        }
-        brevnoIsTaked = false;
-        TextBrevnoUpdate();
-
-    }
+    
 
     public void Update()
     {
@@ -138,11 +119,12 @@ public class GameManager : MonoBehaviour
 
     }
 
-
-    public void ResumeButton()
+    public void GameOver()
     {
-        ResumeGame();
+        SceneManager.LoadScene("Main Scene");
     }
+
+       
 
     public void RestartButton()
     {
@@ -164,6 +146,14 @@ public class GameManager : MonoBehaviour
     public void BackToPauseMenuButton()
     {
         helpMenuPanel.SetActive(false);
+    }
+
+    public void OpenLesopilka(bool isOpened)
+    {
+        if (isOpened)
+            branchOfLesopilka.SetActive(false);
+        else
+            branchOfLesopilka.SetActive(true);
     }
 
 

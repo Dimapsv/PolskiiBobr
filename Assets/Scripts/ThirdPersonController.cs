@@ -42,9 +42,13 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField]
     private Camera playerCamera;
 
+    //interact
+    [SerializeField] float talkDistance = 10f;
+    public bool inConversation; //dialogue movement = 0
+
     private void Awake()
     {
-        rb = this.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         playerActionsAsset = new ThirpdPesonActionsAsset();
     }
 
@@ -53,12 +57,18 @@ public class ThirdPersonController : MonoBehaviour
         playerActionsAsset.Player.Jump.started += DoJump;
         move = playerActionsAsset.Player.Move;
         playerActionsAsset.Player.Enable();
+        DialogueManager.OnDialogueStart.AddListener(JoinConversation);
+        DialogueManager.OnDialogueStop.AddListener(LeaveConversation);
+
+
     }
 
     private void OnDisable()
     {
         playerActionsAsset.Player.Jump.started -= DoJump;
         playerActionsAsset.Player.Disable();
+        DialogueManager.OnDialogueStart.RemoveListener(JoinConversation);
+        DialogueManager.OnDialogueStop.RemoveListener(LeaveConversation);
     }
 
     private void FixedUpdate()
@@ -91,13 +101,18 @@ public class ThirdPersonController : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isPushingButtonPressed = true;
         }
         else
         {
             isPushingButtonPressed = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E)) //interact
+        {
+            Interact();
         }
 
         // Update dash timer
@@ -112,6 +127,38 @@ public class ThirdPersonController : MonoBehaviour
                 dashTimer = 0f;
             }
         }
+    }
+
+    //Interact
+    public void Interact()
+    {
+        if (inConversation)
+        {
+            DialogueManager.instance.SkipLine();
+        }
+        else
+        {
+            if (Physics.Raycast(new Ray(transform.position, transform.forward), out RaycastHit hitInfo, talkDistance))
+            {
+                Debug.Log(hitInfo.collider.gameObject.name);
+                if (hitInfo.collider.gameObject.TryGetComponent(out NPC npc))
+                {
+                    Debug.Log("Interact");
+                    DialogueManager.instance.StartDialogue(npc.dialogue);
+                    QuestManager.instance.AddQuest(npc.quest);
+                }
+
+            }
+        }
+    }
+    void JoinConversation()
+    {
+        inConversation = true;
+    }
+
+    void LeaveConversation()
+    {
+        inConversation = false;
     }
 
     private void LookAt()
@@ -172,12 +219,29 @@ public class ThirdPersonController : MonoBehaviour
         // Perform the dash
         while (isDashing)
         {
-            rb.MovePosition(Vector3.Lerp(startPosition, endPosition, dashTimer / dashTime));
+            
+            Vector3 targetPosition = Vector3.Lerp(startPosition, endPosition, dashTimer/dashTime);
+
+            // Check for collisions
+            Vector3 direction = (targetPosition - rb.position).normalized;
+            RaycastHit hit;
+            if (Physics.Raycast(rb.position, direction, out hit, dashDistance))
+            {
+                // If there is a collision, stop the dash
+                rb.MovePosition(hit.point - direction * 0.2f); // Move slightly back to avoid sticking
+                break;
+            }
+            else
+            {
+                rb.MovePosition(targetPosition);
+            }
+
             yield return null;
         }
+
+        isDashing = false;
     }
 
 
-    
 
 }

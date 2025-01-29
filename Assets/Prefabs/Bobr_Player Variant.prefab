@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1050405258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1050405259}
+  m_Layer: 0
+  m_Name: orientation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1050405259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050405258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2428860491223984620}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243483798056035775
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,17 +789,18 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3098154468845466454}
-  m_LocalRotation: {x: 0.07344277, y: -0.005566922, z: 0.0005235979, w: 0.99728376}
+  m_LocalRotation: {x: 0.07344532, y: -0.0055696536, z: 0.00052273634, w: 0.9972836}
   m_LocalPosition: {x: 34.67649, y: 5.643631, z: 218.95932}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 957550106561720053}
   - {fileID: 6269171483573179899}
   - {fileID: 7084310003543403059}
+  - {fileID: 1050405259}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.424, y: -0.639, z: 0.013}
 --- !u!95 &8598822404067636118
 Animator:
   serializedVersion: 5
@@ -804,8 +836,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!65 &1700001451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -852,12 +884,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decf006068b19cf43818080e9276dad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementForce: 1
+  movementForce: 1.4
   jumpForce: 13
-  maxSpeed: 15
-  dashDistance: 5
-  dashTime: 0.3
-  isDashingUpgraded: 0
+  maxSpeed: 20
+  dashDistance: 7
+  dashTime: 0.2
+  isDashingUpgraded: 1
   radiusPush: 10
   pushTime: 0.2
   isPushing: 0
@@ -865,6 +897,8 @@ MonoBehaviour:
   isPushingUpgraded: 1
   isPushingButtonPressed: 0
   playerCamera: {fileID: 0}
+  talkDistance: 2
+  inConversation: 0
 --- !u!1 &3137952914236283733
 GameObject:
   m_ObjectHideFlags: 0
