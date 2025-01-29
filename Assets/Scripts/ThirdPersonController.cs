@@ -218,13 +218,29 @@ public class ThirdPersonController : MonoBehaviour
         // Perform the dash
         while (isDashing)
         {
-            rb.AddForce(Vector3.MoveTowards(startPosition, endPosition, dashTimer / dashTime), ForceMode.Impulse);
-            //rb.MovePosition();
+            
+            Vector3 targetPosition = Vector3.Lerp(startPosition, endPosition, dashTimer/dashTime);
+
+            // Check for collisions
+            Vector3 direction = (targetPosition - rb.position).normalized;
+            RaycastHit hit;
+            if (Physics.Raycast(rb.position, direction, out hit, dashDistance))
+            {
+                // If there is a collision, stop the dash
+                rb.MovePosition(hit.point - direction * 0.2f); // Move slightly back to avoid sticking
+                break;
+            }
+            else
+            {
+                rb.MovePosition(targetPosition);
+            }
+
             yield return null;
         }
+
+        isDashing = false;
     }
 
 
-    
 
 }
