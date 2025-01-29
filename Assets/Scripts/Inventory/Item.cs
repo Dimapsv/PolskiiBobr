@@ -14,7 +14,7 @@ public class Item : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             OnItemTaked.Invoke(item);
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
 
     }

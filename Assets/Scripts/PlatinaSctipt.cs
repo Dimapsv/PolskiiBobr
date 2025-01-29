@@ -9,7 +9,7 @@ public class PlatinaSctipt : MonoBehaviour
         if (other.CompareTag("Player") && Input.GetKey(KeyCode.E) && FindObjectOfType<GameManager>().brevnoIsTaked == true)
         {
             FindObjectOfType<GameManager>().brevnoIsDelivered +=1;
-            FindObjectOfType<GameManager>().SpawnBrevno();
+            //FindObjectOfType<GameManager>().SpawnBrevno();
         }
 
     }

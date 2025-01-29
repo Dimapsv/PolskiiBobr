@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85c2c6ade88e3dd41911996b7899a282, type: 3}
       propertyPath: m_Name
-      value: Key Poland_Dorf Variant
+      value: KeyOfLesopilka
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c2c6ade88e3dd41911996b7899a282, type: 3}
@@ -75,6 +75,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.62, y: 5.94, z: 3}
   m_Center: {x: 1.5347743, y: 0, z: 0}
+--- !u!114 &-4353280596391889649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5453640286899393891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd283686acb737d4a84dbdba878a121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: ce425be98a206d5439d998a1310727d0, type: 2}
 --- !u!114 &1103838350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,17 +98,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6249c04dfb5bc6a41a4262bb60718391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1103838351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5453640286899393891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d54bb5d01b944d4fadb128d028b99ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

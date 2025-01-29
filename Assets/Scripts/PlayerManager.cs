@@ -12,9 +12,16 @@ public class PlayerManager : MonoBehaviour
     public static UnityEvent<int> OnHealthValueChanged = new UnityEvent<int>();
     public static UnityEvent OnDamageTaked = new UnityEvent();
     public static UnityEvent OnGameOver = new UnityEvent();
+    public static UnityEvent<int> OnBrevnoValueChanged = new UnityEvent<int>();
+    public static UnityEvent<bool> OnKeyOfLesopilkaHasChanged = new UnityEvent<bool>();
 
-
+    // parameters
     public int playerHealth;
+    public int playerBrevnoCount;
+
+
+    // keys
+    public bool keyOfLesopilkaHas;
        
 
     private void OnEnable()
@@ -31,9 +38,16 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        keyOfLesopilkaHas = false;
+        playerBrevnoCount = 0;
         playerHealth = 5;
-        OnHealthValueChanged.Invoke(playerHealth);
-        
+
+
+
+        OnHealthValueChanged?.Invoke(playerHealth);
+        OnBrevnoValueChanged?.Invoke(playerBrevnoCount);
+        OnKeyOfLesopilkaHasChanged?.Invoke(keyOfLesopilkaHas);
+
     }
 
     void Update()
@@ -50,12 +64,17 @@ public class PlayerManager : MonoBehaviour
         {
 
             case "Tree":
+                TakeBrevno(item.countOfTree);
                 Debug.Log("It's Tree");
                 break;
 
             case "Health":
                 Debug.Log("Health");
                 TakeHealth(item.valueOfHealth);
+                break;
+            case "Collactables":
+                Debug.Log("Collactables");
+                TakeCollactables(item.idOfCollactable);
                 break;
         }
             
@@ -65,8 +84,8 @@ public class PlayerManager : MonoBehaviour
     {
         playerHealth -= healtValueChange;
 
-        OnHealthValueChanged.Invoke(playerHealth);
-        OnDamageTaked.Invoke();
+        OnHealthValueChanged?.Invoke(playerHealth);
+        OnDamageTaked?.Invoke();
 
         if (playerHealth <= 0)
         {
@@ -77,7 +96,25 @@ public class PlayerManager : MonoBehaviour
     private void TakeHealth(int healthValueChange)
     {
         playerHealth += healthValueChange;
-        OnHealthValueChanged.Invoke(playerHealth);
+        OnHealthValueChanged?.Invoke(playerHealth);
+    }
+
+    private void TakeBrevno(int brevnoValueChange)
+    {
+        playerBrevnoCount += brevnoValueChange;
+        OnBrevnoValueChanged?.Invoke(playerBrevnoCount);
+    }
+
+    private void TakeCollactables(int idOfItemCollactables)
+    {
+        switch (idOfItemCollactables)
+        {
+            case 0:
+                keyOfLesopilkaHas = true;
+                OnKeyOfLesopilkaHasChanged?.Invoke(keyOfLesopilkaHas);
+                Debug.Log("KeyOfLesopilkaIsTaked");
+                break;
+        }
     }
 
 

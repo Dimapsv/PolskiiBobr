@@ -48,7 +48,7 @@ public class ThirdPersonController : MonoBehaviour
 
     private void Awake()
     {
-        rb = this.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         playerActionsAsset = new ThirpdPesonActionsAsset();
     }
 
@@ -59,6 +59,8 @@ public class ThirdPersonController : MonoBehaviour
         playerActionsAsset.Player.Enable();
         DialogueManager.OnDialogueStart.AddListener(JoinConversation);
         DialogueManager.OnDialogueStop.AddListener(LeaveConversation);
+
+
     }
 
     private void OnDisable()
@@ -216,7 +218,7 @@ public class ThirdPersonController : MonoBehaviour
         // Perform the dash
         while (isDashing)
         {
-            rb.AddForce(Vector3.Lerp(startPosition, endPosition, dashTimer / dashTime), ForceMode.Impulse);
+            rb.AddForce(Vector3.MoveTowards(startPosition, endPosition, dashTimer / dashTime), ForceMode.Impulse);
             //rb.MovePosition();
             yield return null;
         }
