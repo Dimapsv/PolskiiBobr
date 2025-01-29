@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     public Image bloodOverlay; // Try to use DoTweeen for few second looking this
 
     //inventory
+    public GameObject inventoryPanel;
     public Image keyOfLesopilkaImage;
 
     private void Start()
@@ -65,6 +66,7 @@ public class UIManager : MonoBehaviour
 
     public void UIKeyOfLesopilkaUpdate(bool isHasKey)
     {
+        SpawnChild(inventoryPanel.transform,keyOfLesopilkaImage);
         keyOfLesopilkaImage.enabled = isHasKey;
         if (isHasKey)
             OnWriteMessage.Invoke(0); // id = 0 - lesopilka opened
@@ -84,5 +86,14 @@ public class UIManager : MonoBehaviour
     {
         // Скрыть изображение
         bloodOverlay.enabled = false;
+    }
+
+    public void SpawnChild(Transform parent, Image childObjectPrefab)
+    {
+        if (childObjectPrefab != null && parent != null)
+        {
+            GameObject spawnedChild = Instantiate(childObjectPrefab.gameObject, parent.position, parent.rotation);
+            spawnedChild.transform.SetParent(parent);
+        }
     }
 }

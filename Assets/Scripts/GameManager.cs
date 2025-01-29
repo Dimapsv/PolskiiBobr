@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public int brevnoIsDelivered;
     public TextMeshProUGUI brevnoCountText;
     public bool brevnoIsTaked;
-    public GameObject isTakedBrevnoIndicator;
+    
 
     //lesopilka
     public GameObject branchOfLesopilka;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public bool isMazed = false;
     public Transform[] chestSpawnPoints;
     public Transform[] keySpawnPoints;
-    private Transform chestSpawnPoint;
+    
     private Transform keySpawnPoint;
     public GameObject chest;
     public GameObject keyLesopilka;
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         brevnoIsDelivered = 0;
         pauseMenuPanel.SetActive(false);
         helpMenuPanel.SetActive(false);
-        isTakedBrevnoIndicator.SetActive(false);
+        
         
         //SpawnChest();
     }
@@ -76,14 +76,7 @@ public class GameManager : MonoBehaviour
             TogglePauseMenu();
         }
 
-        if (brevnoIsTaked == true)
-        {
-            isTakedBrevnoIndicator.SetActive(true);
-        }
-        else
-        {
-            isTakedBrevnoIndicator.SetActive(false);
-        }
+        
     }
 
     public void TextBrevnoUpdate()
