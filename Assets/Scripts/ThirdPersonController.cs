@@ -145,6 +145,7 @@ public class ThirdPersonController : MonoBehaviour
                 {
                     Debug.Log("Interact");
                     DialogueManager.instance.StartDialogue(npc.dialogue);
+                    QuestManager.instance.AddQuest(npc.quest);
                 }
 
             }

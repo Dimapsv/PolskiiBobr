@@ -6,5 +6,6 @@ using UnityEngine.Events;
 public class NPC : MonoBehaviour
 {
     public DialogueAsset dialogue;
+    public Quest quest;
 
 }
