@@ -25,6 +25,7 @@ public class AI_PATROL : MonoBehaviour
     {
         if (AI_Enemy == AI_State.Patrol)
         {
+            AI_Agent.speed = 5;
             AI_Agent.isStopped = false;
             gameObject.GetComponent<Animator>().SetBool("Move", true);
             AI_Agent.SetDestination(WayPoints[Current_Patch].transform.position);
@@ -42,6 +43,7 @@ public class AI_PATROL : MonoBehaviour
         }
         if (AI_Enemy == AI_State.Chase)
         {
+            AI_Agent.speed = 12;
             gameObject.GetComponent<Animator>().SetBool("Move", true);
             AI_Agent.SetDestination(Player.transform.position);
         }
