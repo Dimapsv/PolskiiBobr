@@ -15,6 +15,8 @@ public class PlayerManager : MonoBehaviour
     public static UnityEvent<int> OnBrevnoValueChanged = new UnityEvent<int>();
     public static UnityEvent<bool> OnKeyOfLesopilkaHasChanged = new UnityEvent<bool>();
 
+
+    public static UnityEvent<int> OnNoteTaked = new UnityEvent<int>();
     // parameters
     public int playerHealth;
     public int playerBrevnoCount;
@@ -76,6 +78,11 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("Collactables");
                 TakeCollactables(item.idOfCollactable);
                 break;
+            case "Note":
+                Debug.Log("Notes");
+                TakeNote(item.idOfNote);
+                break;
+                
         }
             
     }
@@ -115,6 +122,11 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("KeyOfLesopilkaIsTaked");
                 break;
         }
+    }
+
+    private void TakeNote(int idOfNote)
+    {
+        OnNoteTaked?.Invoke(idOfNote);
     }
 
 

@@ -13,12 +13,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text brevnoCountText;
 
     public static UnityEvent<int> OnWriteMessage = new UnityEvent<int>();
-   
+    public int idOfMessageL;
+
     public Image bloodOverlay; // Try to use DoTweeen for few second looking this
 
     //inventory
     public GameObject inventoryPanel;
     public Image keyOfLesopilkaImage;
+
+    //notes
+    public GameObject notesPanel;
+    public Image[] notes;
 
     private void Start()
     {
@@ -36,6 +41,8 @@ public class UIManager : MonoBehaviour
 
         PlayerManager.OnKeyOfLesopilkaHasChanged.AddListener(UIKeyOfLesopilkaUpdate);
 
+        PlayerManager.OnNoteTaked.AddListener(UINoteUpdate);
+
     }
 
     private void OnDisable()
@@ -46,7 +53,9 @@ public class UIManager : MonoBehaviour
         PlayerManager.OnBrevnoValueChanged.RemoveListener(UIBrevnoUpdate);
 
         PlayerManager.OnKeyOfLesopilkaHasChanged.RemoveListener(UIKeyOfLesopilkaUpdate);
-        
+
+        PlayerManager.OnNoteTaked.RemoveListener(UINoteUpdate);
+
     }
         
     public void UIHealthUpdate(int healthValue)
@@ -70,9 +79,26 @@ public class UIManager : MonoBehaviour
         if (isHasKey)
         {
             SpawnChild(inventoryPanel.transform, keyOfLesopilkaImage);
-            OnWriteMessage.Invoke(0); // id = 0 - lesopilka opened
+            idOfMessageL = 0;
+            ShowMessage(); // id = 0 - lesopilka opened
         }
             
+    }
+
+    public void UINoteUpdate(int idOfNote)
+    {
+        SpawnChild(notesPanel.transform, notes[idOfNote - 1]);
+        idOfMessageL = 1;
+        ShowMessage(); // id = 1 - new Note!
+        idOfMessageL = 2;
+        Invoke("ShowMessage", 7.0f);
+
+    }
+
+    public void ShowMessage()
+    {
+        
+        OnWriteMessage.Invoke(idOfMessageL);
     }
 
 

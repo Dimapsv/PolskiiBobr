@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     // PauseMenu
     public GameObject pauseMenuPanel;
     public bool isPaused;
-    public GameObject helpMenuPanel;
+    
 
     
     
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     {
         brevnoIsDelivered = 0;
         pauseMenuPanel.SetActive(false);
-        helpMenuPanel.SetActive(false);
+        
         
         
         //SpawnChest();
@@ -131,16 +131,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void HelpButton()
-    {
-        helpMenuPanel.SetActive(true);
-    }
-
-    public void BackToPauseMenuButton()
-    {
-        helpMenuPanel.SetActive(false);
-    }
-
+    
     public void OpenLesopilka(bool isOpened)
     {
         if (isOpened)

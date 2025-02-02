@@ -4,6 +4,7 @@ public enum ItemType
     Health,
     Collactables,
     Ability,
-    BobrStones
+    BobrStones,
+    Note
 
 }

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -20,8 +17,8 @@ public class InteractableItemAsset : ScriptableObject
     public int idOfCollactable; // 0 - KeyFromLesopika // 1 - Axe 
     // поля для способностей
     public int idOfAblity; // 0 - Dash, 1 - Push, ... , 3 - xxx
-    
 
-    
+    public int idOfNote;
+
 
 }

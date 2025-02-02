@@ -32,6 +32,12 @@ public class MessageManager : MonoBehaviour
             case 0:
                 messageForPlayerText.text = "Открыта лесопилка!";
                 break;
+            case 1:
+                messageForPlayerText.text = "У вас новая записка!";
+                break;
+            case 2:
+                messageForPlayerText.text = "Все записки можно посмотреть в меню паузы";
+                break;
             default:
                 messageForPlayerText.text = "Как у вас дела?)";
                 break;
