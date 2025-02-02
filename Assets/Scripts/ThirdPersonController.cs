@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class ThirdPersonController : MonoBehaviour
 {
     //input fields
     private ThirpdPesonActionsAsset playerActionsAsset;
     private InputAction move;
+
+    public static UnityEvent<bool> OnBobrHiddenChanged = new UnityEvent<bool>();
+    public bool bobrIsHidden;
 
     //movement fields 
     private Rigidbody rb;
@@ -243,5 +247,21 @@ public class ThirdPersonController : MonoBehaviour
     }
 
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("HiddenPlace"))
+        {
+            bobrIsHidden = true;
+            OnBobrHiddenChanged.Invoke(bobrIsHidden);
+        }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("HiddenPlace"))
+        {
+            bobrIsHidden = false;
+            OnBobrHiddenChanged.Invoke(bobrIsHidden);
+        }
+    }
 }
