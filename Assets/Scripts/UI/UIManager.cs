@@ -121,9 +121,19 @@ public class UIManager : MonoBehaviour
     {
         if (childObjectPrefab != null && parent != null)
         {
+            
             GameObject spawnedChild = Instantiate(childObjectPrefab.gameObject, parent.position, parent.rotation);
             spawnedChild.transform.SetParent(parent);
-            spawnedChild.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
+            if (childObjectPrefab == keyOfLesopilkaImage)
+            {
+                spawnedChild.GetComponent<RectTransform>().localScale = new Vector3(1, 0.5f, 1);
+            }
+            else
+            {
+                spawnedChild.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            }
+            
+            
         }
     }
 }
