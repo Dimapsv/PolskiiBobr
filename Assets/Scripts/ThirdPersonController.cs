@@ -147,9 +147,32 @@ public class ThirdPersonController : MonoBehaviour
                 Debug.Log(hitInfo.collider.gameObject.name);
                 if (hitInfo.collider.gameObject.TryGetComponent(out NPC npc))
                 {
-                    Debug.Log("Interact");
-                    DialogueManager.instance.StartDialogue(npc.dialogue);
-                    QuestManager.instance.AddQuest(npc.quest);
+                    Debug.Log("Interact with NPC");
+                    if (!npc.isfirstTalked)
+                    {
+                        DialogueManager.instance.StartDialogue(npc.firstDialogue);
+                        npc.isfirstTalked = true;
+                        if (npc.quest != null)
+                            QuestManager.instance.AddQuest(npc.quest);
+                    }
+                    else
+                    {
+                        if (npc.quest == null)
+                        {
+                            DialogueManager.instance.StartDialogue(npc.postDialogue);
+                        }
+                        else if (npc.quest != null && QuestManager.instance.CheckQuest(npc.id))
+                        {
+                            DialogueManager.instance.StartDialogue(npc.questClearedDialogue);
+                        }
+                        else if (npc.quest != null && !QuestManager.instance.CheckQuest(npc.id))
+                        {
+                            DialogueManager.instance.StartDialogue(npc.questNotClearedQuest);
+                        }
+                           
+                    }
+                    
+                    
                 }
 
             }

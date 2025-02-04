@@ -5,7 +5,19 @@ using UnityEngine.Events;
 
 public class NPC : MonoBehaviour
 {
-    public DialogueAsset dialogue;
+    
+    public bool isfirstTalked;
+    public DialogueAsset firstDialogue;
+    public DialogueAsset postDialogue;
+    public DialogueAsset questClearedDialogue;
+    public DialogueAsset questNotClearedQuest;
     public Quest quest;
+    public int id;
+
+    private void Start()
+    {
+        id = quest.id;
+    }
+
 
 }

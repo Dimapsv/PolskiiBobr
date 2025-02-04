@@ -6,11 +6,21 @@ using UnityEngine.Events;
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager instance;
-
-    public bool isBrevnoQuestTaked;
-    public bool isBrevnoQuestCompleted;
-
+    
     public List<Quest> currentQuests = new List<Quest>();
+
+    public bool brevnoQuestCleadred;
+
+    private void OnEnable()
+    {
+        PlayerManager.OnBrevnoValueChanged.AddListener(CheckBrevnoCount);
+    }
+
+    private void OnDisable()
+    {
+        PlayerManager.OnBrevnoValueChanged.RemoveListener(CheckBrevnoCount);
+    }
+
 
     private void Awake() //SingleTone
     {
@@ -26,8 +36,7 @@ public class QuestManager : MonoBehaviour
 
     private void Start()
     {
-        isBrevnoQuestTaked = false;
-        isBrevnoQuestCompleted = false;
+        brevnoQuestCleadred = false;
 
     }
 
@@ -36,6 +45,41 @@ public class QuestManager : MonoBehaviour
         currentQuests.Add(quest);
     }
 
+    public bool CheckQuest(int idOfQuest)
+    {
+        switch (idOfQuest)
+        {
+            case 0:
+                if (brevnoQuestCleadred)
+                    return true;
+                else
+                    return false;
+                
+
+            default: return false;
+
+        }   
+    }
+
+
+
+    public void CheckBrevnoCount(int currentBrevnoCount)
+    {
+             if (currentBrevnoCount >= 5)
+            {
+                brevnoQuestCleadred = true;
+                
+            }
+            else
+            {
+                brevnoQuestCleadred = false;
+                Debug.Log(brevnoQuestCleadred);
+            }
+
+    }
+
+
+    
 
 
 }
