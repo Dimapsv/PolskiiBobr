@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NOTE1
   m_EditorClassIdentifier: 
   itemType: 5
-  itemName: Note
+  itemName: Note1
   icon: {fileID: 21300000, guid: ce991ccaaf7ae774a84ac11862ac331a, type: 3}
   countOfTree: 0
   valueOfHealth: 0
