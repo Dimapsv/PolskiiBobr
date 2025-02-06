@@ -18,6 +18,8 @@ public class InteractableItemAsset : ScriptableObject
     // поля для способностей
     public int idOfAblity; // 0 - Dash, 1 - Push, ... , 3 - xxx
 
+    public int idOfBobrStone; // 0 - purple, ...
+
     public int idOfNote;
 
 

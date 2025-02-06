@@ -12,11 +12,15 @@ public class PlayerManager : MonoBehaviour
     public static UnityEvent<int> OnHealthValueChanged = new UnityEvent<int>();
     public static UnityEvent OnDamageTaked = new UnityEvent();
     public static UnityEvent OnGameOver = new UnityEvent();
+    
     public static UnityEvent<int> OnBrevnoValueChanged = new UnityEvent<int>();
     public static UnityEvent<bool> OnKeyOfLesopilkaHasChanged = new UnityEvent<bool>();
     public static UnityEvent<bool> OnBallHasChanged = new UnityEvent<bool>();
+    public static UnityEvent<int> OnBobrStoneTaked = new UnityEvent<int>();
 
     public static UnityEvent<int> OnNoteTaked = new UnityEvent<int>();
+
+    public static UnityEvent<int> OnAbilityTaked = new UnityEvent<int>();
     // parameters
     public int playerHealth;
     public int playerBrevnoCount;
@@ -52,6 +56,7 @@ public class PlayerManager : MonoBehaviour
         OnHealthValueChanged?.Invoke(playerHealth);
         OnBrevnoValueChanged?.Invoke(playerBrevnoCount);
         OnKeyOfLesopilkaHasChanged?.Invoke(keyOfLesopilkaHas);
+        OnBallHasChanged?.Invoke(ballForBoyHas);
 
     }
 
@@ -85,7 +90,17 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("Notes");
                 TakeNote(item.idOfNote);
                 break;
-                
+            case "BobrStones":
+                Debug.Log("BobrStone");
+                TakeBobrStone(item.idOfBobrStone);
+                break;
+            case "Ability":
+                Debug.Log("Ability");
+                TakeAbility(item.idOfAblity);
+                break;
+
+
+
         }
             
     }
@@ -138,5 +153,14 @@ public class PlayerManager : MonoBehaviour
     }
 
 
-    
+    private void TakeBobrStone(int idOfBobrStone)
+    {
+        OnBobrStoneTaked?.Invoke(idOfBobrStone);
+    }
+
+    private void TakeAbility(int idOfAbility)
+    {
+        OnAbilityTaked?.Invoke(idOfAbility);
+    }
+
 }

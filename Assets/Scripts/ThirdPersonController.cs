@@ -64,6 +64,8 @@ public class ThirdPersonController : MonoBehaviour
         DialogueManager.OnDialogueStart.AddListener(JoinConversation);
         DialogueManager.OnDialogueStop.AddListener(LeaveConversation);
 
+        PlayerManager.OnAbilityTaked.AddListener(UpgradeAbilities);
+
 
     }
 
@@ -73,6 +75,8 @@ public class ThirdPersonController : MonoBehaviour
         playerActionsAsset.Player.Disable();
         DialogueManager.OnDialogueStart.RemoveListener(JoinConversation);
         DialogueManager.OnDialogueStop.RemoveListener(LeaveConversation);
+
+        PlayerManager.OnAbilityTaked.RemoveListener(UpgradeAbilities);
     }
 
     private void FixedUpdate()
@@ -164,6 +168,7 @@ public class ThirdPersonController : MonoBehaviour
                         else if (npc.quest != null && QuestManager.instance.CheckQuest(npc.id))
                         {
                             DialogueManager.instance.StartDialogue(npc.questClearedDialogue);
+                            QuestManager.instance.SpawnReward(npc.id);
                         }
                         else if (npc.quest != null && !QuestManager.instance.CheckQuest(npc.id))
                         {
@@ -176,6 +181,16 @@ public class ThirdPersonController : MonoBehaviour
                 }
 
             }
+        }
+    }
+
+    public void UpgradeAbilities(int idOfAbility)
+    {
+        switch (idOfAbility)
+        {
+            case 0:
+                isPushingUpgraded = true;
+                break;
         }
     }
     void JoinConversation()

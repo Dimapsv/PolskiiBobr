@@ -11,15 +11,25 @@ public class QuestManager : MonoBehaviour
 
     public bool brevnoQuestCleared;
     public bool ballForBoyQuestCleared;
+    public bool bobrStonesQuestCleared;
+
+    public List<bool> listOfBobrStone = new List<bool>() { false, false, false, false, false };
+
+    public GameObject SpawnerHealthForBall;
+    public GameObject SpawnerPushUpgrade;
 
     private void OnEnable()
     {
         PlayerManager.OnBrevnoValueChanged.AddListener(CheckBrevnoCount);
+        PlayerManager.OnBallHasChanged.AddListener(CheckBoyBallHaving);
+        PlayerManager.OnBobrStoneTaked.AddListener(CheckBobrStoneHaving);
     }
 
     private void OnDisable()
     {
         PlayerManager.OnBrevnoValueChanged.RemoveListener(CheckBrevnoCount);
+        PlayerManager.OnBallHasChanged.RemoveListener(CheckBoyBallHaving);
+        PlayerManager.OnBobrStoneTaked.AddListener(CheckBobrStoneHaving);
     }
 
 
@@ -38,6 +48,8 @@ public class QuestManager : MonoBehaviour
     private void Start()
     {
         brevnoQuestCleared = false;
+        ballForBoyQuestCleared = false;
+        bobrStonesQuestCleared = false;
 
     }
 
@@ -55,11 +67,41 @@ public class QuestManager : MonoBehaviour
                     return true;
                 else
                     return false;
-                
+            case 1:
+                if (ballForBoyQuestCleared)
+                    return true;
+                else
+                    return false;
+            case 2:
+                if (bobrStonesQuestCleared)
+                    return true;
+                else
+                    return false;
+
 
             default: return false;
 
         }   
+    }
+
+    public void SpawnReward(int questId)
+    {
+        switch (questId)
+        {
+            case 1:
+                if (ballForBoyQuestCleared)
+                {
+                    SpawnerHealthForBall.SetActive(true);
+                }
+                break;
+            case 2:
+                if (bobrStonesQuestCleared)
+                {
+                    SpawnerHealthForBall.SetActive(true);
+                }
+                break;
+            default: return;
+        }
     }
 
 
@@ -79,8 +121,35 @@ public class QuestManager : MonoBehaviour
 
     }
 
+    public void CheckBoyBallHaving(bool ballBoyHas) // ball
+    {
+        if (ballBoyHas)
+            ballForBoyQuestCleared = true;
+        else
+            ballForBoyQuestCleared = false;
+    }
 
-    
+
+    public void CheckBobrStoneHaving(int idOfBobrStone)
+    {
+        listOfBobrStone[idOfBobrStone] = true;
+        int boolCheckerStones = 0;
+        for (int i = 0; i < listOfBobrStone.Count; i++)
+        {
+            if (listOfBobrStone[i] == true)
+            {
+                boolCheckerStones++;
+            }
+        }
+
+        if (boolCheckerStones == 5)
+        {
+            bobrStonesQuestCleared = true;
+        }
+
+
+    }
+
 
 
 }
