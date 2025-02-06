@@ -97,7 +97,7 @@ public class QuestManager : MonoBehaviour
             case 2:
                 if (bobrStonesQuestCleared)
                 {
-                    SpawnerHealthForBall.SetActive(true);
+                    SpawnerPushUpgrade.SetActive(true);
                 }
                 break;
             default: return;
