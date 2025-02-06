@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
     public static UnityEvent OnGameOver = new UnityEvent();
     public static UnityEvent<int> OnBrevnoValueChanged = new UnityEvent<int>();
     public static UnityEvent<bool> OnKeyOfLesopilkaHasChanged = new UnityEvent<bool>();
-
+    public static UnityEvent<bool> OnBallHasChanged = new UnityEvent<bool>();
 
     public static UnityEvent<int> OnNoteTaked = new UnityEvent<int>();
     // parameters
@@ -25,6 +25,8 @@ public class PlayerManager : MonoBehaviour
     // keys
     public bool keyOfLesopilkaHas;
        
+    // sideQuests
+    public bool ballForBoyHas;
 
     private void OnEnable()
     {
@@ -41,6 +43,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         keyOfLesopilkaHas = false;
+        ballForBoyHas = false;
         playerBrevnoCount = 0;
         playerHealth = 5;
 
@@ -120,6 +123,11 @@ public class PlayerManager : MonoBehaviour
                 keyOfLesopilkaHas = true;
                 OnKeyOfLesopilkaHasChanged?.Invoke(keyOfLesopilkaHas);
                 Debug.Log("KeyOfLesopilkaIsTaked");
+                break;
+            case 1:
+                ballForBoyHas = true;
+                OnBallHasChanged?.Invoke(ballForBoyHas);
+                Debug.Log("BallIsTaked");
                 break;
         }
     }

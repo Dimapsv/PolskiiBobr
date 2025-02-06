@@ -16,7 +16,10 @@ public class NPC : MonoBehaviour
 
     private void Start()
     {
-        id = quest.id;
+        if (quest != null)
+            id = quest.id;
+        
+            
     }
 
 

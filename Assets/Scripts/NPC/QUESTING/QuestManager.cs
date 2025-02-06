@@ -9,7 +9,8 @@ public class QuestManager : MonoBehaviour
     
     public List<Quest> currentQuests = new List<Quest>();
 
-    public bool brevnoQuestCleadred;
+    public bool brevnoQuestCleared;
+    public bool ballForBoyQuestCleared;
 
     private void OnEnable()
     {
@@ -36,7 +37,7 @@ public class QuestManager : MonoBehaviour
 
     private void Start()
     {
-        brevnoQuestCleadred = false;
+        brevnoQuestCleared = false;
 
     }
 
@@ -50,7 +51,7 @@ public class QuestManager : MonoBehaviour
         switch (idOfQuest)
         {
             case 0:
-                if (brevnoQuestCleadred)
+                if (brevnoQuestCleared)
                     return true;
                 else
                     return false;
@@ -67,13 +68,13 @@ public class QuestManager : MonoBehaviour
     {
              if (currentBrevnoCount >= 5)
             {
-                brevnoQuestCleadred = true;
+                brevnoQuestCleared = true;
                 
             }
             else
             {
-                brevnoQuestCleadred = false;
-                Debug.Log(brevnoQuestCleadred);
+                brevnoQuestCleared = false;
+                Debug.Log(brevnoQuestCleared);
             }
 
     }
