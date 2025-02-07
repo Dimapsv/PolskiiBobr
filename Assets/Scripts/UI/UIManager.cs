@@ -25,15 +25,23 @@ public class UIManager : MonoBehaviour
     public GameObject notesPanel;
     public Image[] notes;
 
+    //fastTrevell
+    public GameObject fastTrevelPanel;
+
+
+
     private void Start()
     {
         bloodOverlay.enabled = false;
-        
+        fastTrevelPanel.SetActive(false);
+
 
     }
 
     private void OnEnable()
     {
+        FastTrevel.OnFastTrevelStaying.AddListener(UIFastTrevel);
+
         PlayerManager.OnHealthValueChanged.AddListener(UIHealthUpdate);
         PlayerManager.OnDamageTaked.AddListener(UIDamageTaking);
 
@@ -55,6 +63,8 @@ public class UIManager : MonoBehaviour
         PlayerManager.OnKeyOfLesopilkaHasChanged.RemoveListener(UIKeyOfLesopilkaUpdate);
 
         PlayerManager.OnNoteTaked.RemoveListener(UINoteUpdate);
+
+        FastTrevel.OnFastTrevelStaying.RemoveListener(UIFastTrevel);
 
     }
         
@@ -115,6 +125,18 @@ public class UIManager : MonoBehaviour
     {
         // Скрыть изображение
         bloodOverlay.enabled = false;
+    }
+
+    public void UIFastTrevel(bool isStaying)
+    {
+        if (isStaying)
+        {
+            fastTrevelPanel.SetActive(true);
+        }
+        else
+        {
+            fastTrevelPanel.SetActive(false);
+        }
     }
 
     public void SpawnChild(Transform parent, Image childObjectPrefab)

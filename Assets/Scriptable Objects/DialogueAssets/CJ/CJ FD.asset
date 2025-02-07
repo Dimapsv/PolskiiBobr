@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6333995c15e4a4a8681deb12d6ac28, type: 3}
-  m_Name: Major_1
+  m_Name: CJ FD
   m_EditorClassIdentifier: 
-  nameOfNps: "\u041C\u044D\u0440"
+  nameOfNps: "\u0421\u0438 \u0414\u0436\u0435\u0439"
   dialogue:
-  - "\u042F \u043C\u044D\u0440"
+  - "\u0412 \u044D\u0442\u043E\u0442 \u0440\u0430\u0437 \u044F \u0441\u043C\u043E\u0433\u0443
+    \u043D\u0430\u0447\u0430\u0442\u044C \u0441\u043D\u0430\u0447\u0430\u043B\u0430"

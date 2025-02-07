@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using Unity.VisualScripting;
 
 public class ThirdPersonController : MonoBehaviour
 {
@@ -336,6 +337,22 @@ public class ThirdPersonController : MonoBehaviour
         {
             bobrIsHidden = false;
             OnBobrHiddenChanged.Invoke(bobrIsHidden);
+        }
+    }
+
+    public void FastTrevel(int idOfRide)
+    {
+        switch (idOfRide) 
+        {
+            case 0:
+                transform.position = new Vector3(294.98f, 4.13f, 276.96f);
+                break;
+            case 1:
+                transform.position = new Vector3(218.1875f, 4.0f, 415.08f);
+                break;
+            case 2:
+                transform.position = new Vector3(533.13f, 4.43f, 417.42f);
+                break;
         }
     }
 }
