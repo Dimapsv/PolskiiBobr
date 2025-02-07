@@ -8,6 +8,7 @@ TagManager:
   - PolandDorf
   - MazeEnemy
   - HiddenPlace
+  - BULLBRENCH
   layers:
   - Default
   - TransparentFX

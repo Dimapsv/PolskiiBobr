@@ -21,7 +21,9 @@ public class CarEnterExitSystem : MonoBehaviour
 
     public bool isDriving;
 
-   public GameObject bobrRide;
+    public GameObject bobrRide;
+
+    public AudioSource audioCar;
 
 
 
@@ -32,6 +34,7 @@ public class CarEnterExitSystem : MonoBehaviour
         DriveUi.gameObject.SetActive(false);
         isDriving = false;
         rbCar.isKinematic = true;
+        audioCar.mute = true;
     }
 
     // Update is called once per frame
@@ -43,7 +46,7 @@ public class CarEnterExitSystem : MonoBehaviour
             rbCar.isKinematic = false;
             CarController.enabled = true; // After Click E button Car Controller Script is enabled
 
-            
+            audioCar.mute = false;
 
 
             DriveUi.gameObject.SetActive(false);
@@ -63,7 +66,7 @@ public class CarEnterExitSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-
+            audioCar.mute = true;
             rbCar.isKinematic = true;
             CarController.enabled = false; // After Click G button Car Controller Script is disable
 

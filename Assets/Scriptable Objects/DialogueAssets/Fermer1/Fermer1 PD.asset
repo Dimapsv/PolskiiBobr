@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6333995c15e4a4a8681deb12d6ac28, type: 3}
-  m_Name: Fermer Post Dialogue
+  m_Name: Fermer1 PD
   m_EditorClassIdentifier: 
   nameOfNps: "\u0424\u0435\u0440\u043C\u0435\u0440"
   dialogue:
