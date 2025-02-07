@@ -5,6 +5,7 @@ public enum ItemType
     Collactables,
     Ability,
     BobrStones,
-    Note
-
+    Note,
+    Chicken
+    
 }

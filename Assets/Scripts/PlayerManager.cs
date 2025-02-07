@@ -21,6 +21,13 @@ public class PlayerManager : MonoBehaviour
     public static UnityEvent<int> OnNoteTaked = new UnityEvent<int>();
 
     public static UnityEvent<int> OnAbilityTaked = new UnityEvent<int>();
+
+    public static UnityEvent OnChickenTaked = new UnityEvent();
+
+    public static UnityEvent<bool> OnFuelTankHasChanged = new UnityEvent<bool>();
+
+    public static UnityEvent<bool> OnAxeHasChanged = new UnityEvent<bool>();
+
     // parameters
     public int playerHealth;
     public int playerBrevnoCount;
@@ -31,7 +38,10 @@ public class PlayerManager : MonoBehaviour
        
     // sideQuests
     public bool ballForBoyHas;
+    public bool fuelTankHas;
 
+    public bool axeHas;
+    
     private void OnEnable()
     {
         DamageScript.OnDealingDamage.AddListener(TakeDamage);
@@ -48,6 +58,8 @@ public class PlayerManager : MonoBehaviour
     {
         keyOfLesopilkaHas = false;
         ballForBoyHas = false;
+        fuelTankHas = false;
+        axeHas = false;
         playerBrevnoCount = 0;
         playerHealth = 5;
 
@@ -57,16 +69,11 @@ public class PlayerManager : MonoBehaviour
         OnBrevnoValueChanged?.Invoke(playerBrevnoCount);
         OnKeyOfLesopilkaHasChanged?.Invoke(keyOfLesopilkaHas);
         OnBallHasChanged?.Invoke(ballForBoyHas);
-
+        OnFuelTankHasChanged?.Invoke(fuelTankHas);
+        OnAxeHasChanged?.Invoke(axeHas);
     }
 
-    void Update()
-    {
-        
-
-        
-    }
-
+    
     public void GetItem(InteractableItemAsset item)
     {
         string itemType = item.itemType.ToString();
@@ -98,6 +105,11 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("Ability");
                 TakeAbility(item.idOfAblity);
                 break;
+            case "Chicken":
+                Debug.Log("Chicken");
+                TakeChicken();
+                break;
+            
 
 
 
@@ -144,6 +156,16 @@ public class PlayerManager : MonoBehaviour
                 OnBallHasChanged?.Invoke(ballForBoyHas);
                 Debug.Log("BallIsTaked");
                 break;
+            case 2:
+                fuelTankHas = true;
+                OnFuelTankHasChanged?.Invoke(fuelTankHas);
+                Debug.Log("FuelTaked");
+                break;
+            case 3:
+                axeHas = true;
+                OnAxeHasChanged?.Invoke(axeHas);
+                Debug.Log("AxeTaked");
+                break; 
         }
     }
 
@@ -162,5 +184,13 @@ public class PlayerManager : MonoBehaviour
     {
         OnAbilityTaked?.Invoke(idOfAbility);
     }
+
+    private void TakeChicken()
+    {
+        OnChickenTaked?.Invoke();
+    }
+
+    
+
 
 }

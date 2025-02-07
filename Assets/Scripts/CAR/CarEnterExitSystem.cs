@@ -24,8 +24,19 @@ public class CarEnterExitSystem : MonoBehaviour
     public GameObject bobrRide;
 
     public AudioSource audioCar;
+    public AudioSource audioSkid;
 
+    public bool isFuelHas;
 
+    private void OnEnable()
+    {
+        PlayerManager.OnFuelTankHasChanged.AddListener(CheckFuel);
+    }
+
+    private void OnDisable()
+    {
+        PlayerManager.OnFuelTankHasChanged.RemoveListener(CheckFuel);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +46,7 @@ public class CarEnterExitSystem : MonoBehaviour
         isDriving = false;
         rbCar.isKinematic = true;
         audioCar.mute = true;
+        isFuelHas = false;
     }
 
     // Update is called once per frame
@@ -44,9 +56,21 @@ public class CarEnterExitSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && Candrive)  // Here After Click E button and trigger is true player is driving
         {
             rbCar.isKinematic = false;
-            CarController.enabled = true; // After Click E button Car Controller Script is enabled
+            if (isFuelHas == true)
+            {
+                CarController.enabled = true; // After Click E button Car Controller Script is enabled
+                audioCar.mute = false;
+                audioSkid.mute = false;
+            }
+            else
+            {
+                CarController.enabled = false;
+                audioCar.mute = true;
+                audioSkid.mute = true;
+            }
+           
 
-            audioCar.mute = false;
+            
 
 
             DriveUi.gameObject.SetActive(false);
@@ -67,6 +91,7 @@ public class CarEnterExitSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             audioCar.mute = true;
+            audioSkid.mute = true;
             rbCar.isKinematic = true;
             CarController.enabled = false; // After Click G button Car Controller Script is disable
 
@@ -100,5 +125,10 @@ public class CarEnterExitSystem : MonoBehaviour
             DriveUi.gameObject.SetActive(false);
             Candrive = false;
         }
+    }
+
+    public void CheckFuel(bool fuelChecker)
+    {
+        isFuelHas = fuelChecker;
     }
 }

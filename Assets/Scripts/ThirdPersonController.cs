@@ -12,6 +12,9 @@ public class ThirdPersonController : MonoBehaviour
     private InputAction move;
 
     public static UnityEvent<bool> OnBobrHiddenChanged = new UnityEvent<bool>();
+
+    public static UnityEvent OnLesopilkaTreeTaked = new UnityEvent();
+
     public bool bobrIsHidden;
 
     //movement fields 
@@ -50,10 +53,18 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField] float talkDistance = 10f;
     public bool inConversation; //dialogue movement = 0
 
+    public bool isAxeHas = false;
+    public GameObject bobrAxe;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         playerActionsAsset = new ThirpdPesonActionsAsset();
+    }
+
+    private void Start()
+    {
+        bobrAxe.SetActive(false);
     }
 
     private void OnEnable()
@@ -66,6 +77,8 @@ public class ThirdPersonController : MonoBehaviour
 
         PlayerManager.OnAbilityTaked.AddListener(UpgradeAbilities);
 
+        PlayerManager.OnAxeHasChanged.AddListener(CheckAxe);
+
 
     }
 
@@ -77,6 +90,8 @@ public class ThirdPersonController : MonoBehaviour
         DialogueManager.OnDialogueStop.RemoveListener(LeaveConversation);
 
         PlayerManager.OnAbilityTaked.RemoveListener(UpgradeAbilities);
+
+        PlayerManager.OnAxeHasChanged.RemoveListener(CheckAxe);
     }
 
     private void FixedUpdate()
@@ -97,7 +112,7 @@ public class ThirdPersonController : MonoBehaviour
 
         LookAt();
 
-        
+
     }
 
 
@@ -174,14 +189,35 @@ public class ThirdPersonController : MonoBehaviour
                         {
                             DialogueManager.instance.StartDialogue(npc.questNotClearedQuest);
                         }
-                           
+
                     }
-                    
-                    
+
+
+                }
+
+                if (hitInfo.collider.gameObject.TryGetComponent(out LesopilkaTree tree))
+                {
+                    if (isAxeHas)
+                    {
+                        OnLesopilkaTreeTaked?.Invoke();
+                        bobrAxe.SetActive(true);
+                        tree.gameObject.SetActive(false);
+                        Invoke("HideAxe",1.5f);
+                    }
                 }
 
             }
         }
+    }
+
+    public void HideAxe()
+    {
+        bobrAxe?.SetActive(false);
+    }
+
+    public void CheckAxe(bool isAxeHasChecker)
+    {
+        isAxeHas = isAxeHasChecker;
     }
 
     public void UpgradeAbilities(int idOfAbility)

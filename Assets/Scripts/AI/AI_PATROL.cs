@@ -25,7 +25,14 @@ public class AI_PATROL : MonoBehaviour
     {
         if (AI_Enemy == AI_State.Patrol)
         {
-            AI_Agent.speed = 5;
+            if (gameObject.CompareTag("Chicken"))
+            {
+                AI_Agent.speed = 12;
+            }
+            else
+            {
+                AI_Agent.speed = 5;
+            }
             AI_Agent.isStopped = false;
             gameObject.GetComponent<Animator>().SetBool("Move", true);
             AI_Agent.SetDestination(WayPoints[Current_Patch].transform.position);

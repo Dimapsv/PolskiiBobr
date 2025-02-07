@@ -9,27 +9,42 @@ public class QuestManager : MonoBehaviour
     
     public List<Quest> currentQuests = new List<Quest>();
 
+    //quests
     public bool brevnoQuestCleared;
     public bool ballForBoyQuestCleared;
     public bool bobrStonesQuestCleared;
+    public bool chickenFermerQuestCleared;
+    public bool lesopilkaQuestCleared;
 
     public List<bool> listOfBobrStone = new List<bool>() { false, false, false, false, false };
 
+    [SerializeField]
+    private int chickenCount;
+
+    [SerializeField]
+    private int lesopilkaTreeCount;
+
     public GameObject SpawnerHealthForBall;
     public GameObject SpawnerPushUpgrade;
+    public GameObject SpawnerFuel;
+    public GameObject SpawnerLesopilkaTree;
 
     private void OnEnable()
     {
+        ThirdPersonController.OnLesopilkaTreeTaked.AddListener(CheckLesopilkaTreeCount);
+
         PlayerManager.OnBrevnoValueChanged.AddListener(CheckBrevnoCount);
         PlayerManager.OnBallHasChanged.AddListener(CheckBoyBallHaving);
         PlayerManager.OnBobrStoneTaked.AddListener(CheckBobrStoneHaving);
+        PlayerManager.OnChickenTaked.AddListener(CheckChickenHaving);
     }
 
     private void OnDisable()
     {
         PlayerManager.OnBrevnoValueChanged.RemoveListener(CheckBrevnoCount);
         PlayerManager.OnBallHasChanged.RemoveListener(CheckBoyBallHaving);
-        PlayerManager.OnBobrStoneTaked.AddListener(CheckBobrStoneHaving);
+        PlayerManager.OnBobrStoneTaked.RemoveListener(CheckBobrStoneHaving);
+        PlayerManager.OnChickenTaked.RemoveListener(CheckChickenHaving);
     }
 
 
@@ -50,6 +65,8 @@ public class QuestManager : MonoBehaviour
         brevnoQuestCleared = false;
         ballForBoyQuestCleared = false;
         bobrStonesQuestCleared = false;
+        chickenFermerQuestCleared = false;
+        chickenCount = 0;
 
     }
 
@@ -77,6 +94,17 @@ public class QuestManager : MonoBehaviour
                     return true;
                 else
                     return false;
+            case 3:
+                if (chickenFermerQuestCleared)
+                    return true;
+                else
+                    return false;
+            case 4:
+                if (lesopilkaQuestCleared)
+                    return true;
+                else
+                    return false;
+
 
 
             default: return false;
@@ -100,6 +128,18 @@ public class QuestManager : MonoBehaviour
                     SpawnerPushUpgrade.SetActive(true);
                 }
                 break;
+            case 3:
+                if (chickenFermerQuestCleared)
+                {
+                    SpawnerFuel.SetActive(true);
+                }
+                break;
+            case 4:
+                if (lesopilkaQuestCleared)
+                {
+                    SpawnerLesopilkaTree.SetActive(true);
+                }
+                break;
             default: return;
         }
     }
@@ -108,7 +148,7 @@ public class QuestManager : MonoBehaviour
 
     public void CheckBrevnoCount(int currentBrevnoCount)
     {
-             if (currentBrevnoCount >= 5)
+            if (currentBrevnoCount >= 5)
             {
                 brevnoQuestCleared = true;
                 
@@ -147,6 +187,35 @@ public class QuestManager : MonoBehaviour
             bobrStonesQuestCleared = true;
         }
 
+
+    }
+
+    public void CheckChickenHaving()
+    {
+        chickenCount++;
+
+        if (chickenCount >= 4)
+        {
+            chickenFermerQuestCleared = true;
+        }
+        else
+        {
+            chickenFermerQuestCleared = false;
+        }
+    }
+
+    public void CheckLesopilkaTreeCount()
+    {
+        lesopilkaTreeCount++;
+
+        if (lesopilkaTreeCount >= 20)
+        {
+            lesopilkaQuestCleared = true;
+        }
+        else 
+        {
+            lesopilkaQuestCleared = false;
+        }
 
     }
 

@@ -9,6 +9,7 @@ TagManager:
   - MazeEnemy
   - HiddenPlace
   - BULLBRENCH
+  - Chicken
   layers:
   - Default
   - TransparentFX
