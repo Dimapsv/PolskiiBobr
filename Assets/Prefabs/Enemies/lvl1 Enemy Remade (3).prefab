@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 25
-  angle: 110
+  angle: 220
   playerRef: {fileID: 0}
   targetMask:
     serializedVersion: 2

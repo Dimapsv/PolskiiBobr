@@ -351,6 +351,9 @@ public class ThirdPersonController : MonoBehaviour
                 transform.position = new Vector3(218.1875f, 4.0f, 415.08f);
                 break;
             case 2:
+                transform.position = new Vector3(134.4877f, 4.07f, 257.9081f);
+                break;
+            case 3:
                 transform.position = new Vector3(533.13f, 4.43f, 417.42f);
                 break;
         }

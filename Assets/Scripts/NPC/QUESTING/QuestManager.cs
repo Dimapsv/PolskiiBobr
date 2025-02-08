@@ -15,6 +15,7 @@ public class QuestManager : MonoBehaviour
     public bool bobrStonesQuestCleared;
     public bool chickenFermerQuestCleared;
     public bool lesopilkaQuestCleared;
+    public bool mommyQuestCleared;
 
     public List<bool> listOfBobrStone = new List<bool>() { false, false, false, false, false };
 
@@ -32,6 +33,7 @@ public class QuestManager : MonoBehaviour
     private void OnEnable()
     {
         ThirdPersonController.OnLesopilkaTreeTaked.AddListener(CheckLesopilkaTreeCount);
+        Mommy.OnForbiddenBoyHasChanged.AddListener(CheckMommyQuest);
 
         PlayerManager.OnBrevnoValueChanged.AddListener(CheckBrevnoCount);
         PlayerManager.OnBallHasChanged.AddListener(CheckBoyBallHaving);
@@ -41,6 +43,9 @@ public class QuestManager : MonoBehaviour
 
     private void OnDisable()
     {
+        ThirdPersonController.OnLesopilkaTreeTaked.AddListener(CheckLesopilkaTreeCount);
+        Mommy.OnForbiddenBoyHasChanged.RemoveListener(CheckMommyQuest);
+
         PlayerManager.OnBrevnoValueChanged.RemoveListener(CheckBrevnoCount);
         PlayerManager.OnBallHasChanged.RemoveListener(CheckBoyBallHaving);
         PlayerManager.OnBobrStoneTaked.RemoveListener(CheckBobrStoneHaving);
@@ -101,6 +106,11 @@ public class QuestManager : MonoBehaviour
                     return false;
             case 4:
                 if (lesopilkaQuestCleared)
+                    return true;
+                else
+                    return false;
+            case 5:
+                if (mommyQuestCleared)
                     return true;
                 else
                     return false;
@@ -219,6 +229,9 @@ public class QuestManager : MonoBehaviour
 
     }
 
-
+    public void CheckMommyQuest()
+    {
+        mommyQuestCleared = true;
+    }
 
 }

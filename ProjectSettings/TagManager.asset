@@ -10,6 +10,7 @@ TagManager:
   - HiddenPlace
   - BULLBRENCH
   - Chicken
+  - ForbiddenBoy
   layers:
   - Default
   - TransparentFX
