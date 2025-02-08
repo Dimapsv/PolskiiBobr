@@ -19,4 +19,5 @@ MonoBehaviour:
   valueOfHealth: 0
   idOfCollactable: 0
   idOfAblity: 0
-  idOfNote: 3
+  idOfBobrStone: 0
+  idOfNote: 2

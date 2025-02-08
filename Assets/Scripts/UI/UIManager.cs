@@ -23,7 +23,13 @@ public class UIManager : MonoBehaviour
 
     //notes
     public GameObject notesPanel;
-    public Image[] notes;
+    public TMP_Text noteText;
+
+    [TextArea]
+    public List<string> noteSentences = new List<string>();
+
+    public List<GameObject> noteButtons = new List<GameObject>();
+    
 
     //fastTrevell
     public GameObject fastTrevelPanel;
@@ -97,12 +103,20 @@ public class UIManager : MonoBehaviour
 
     public void UINoteUpdate(int idOfNote)
     {
-        SpawnChild(notesPanel.transform, notes[idOfNote - 1]);
+        noteButtons[idOfNote].SetActive(true);
+
         idOfMessageL = 1;
         ShowMessage(); // id = 1 - new Note!
         idOfMessageL = 2;
         Invoke("ShowMessage", 7.0f);
 
+    }
+
+    public void ShowNote(int idOfNote)
+    {
+        notesPanel.SetActive(true);
+
+        noteText.text = noteSentences[idOfNote];
     }
 
     public void ShowMessage()
@@ -146,14 +160,9 @@ public class UIManager : MonoBehaviour
             
             GameObject spawnedChild = Instantiate(childObjectPrefab.gameObject, parent.position, parent.rotation);
             spawnedChild.transform.SetParent(parent);
-            if (childObjectPrefab == keyOfLesopilkaImage)
-            {
-                spawnedChild.GetComponent<RectTransform>().localScale = new Vector3(1, 0.5f, 1);
-            }
-            else
-            {
-                spawnedChild.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-            }
+            spawnedChild.GetComponent<RectTransform>().localScale = new Vector3(1, 0.5f, 1);
+            
+            
             
             
         }

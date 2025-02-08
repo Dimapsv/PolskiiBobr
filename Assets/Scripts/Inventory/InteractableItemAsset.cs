@@ -22,5 +22,7 @@ public class InteractableItemAsset : ScriptableObject
 
     public int idOfNote;
 
+    
+
 
 }
