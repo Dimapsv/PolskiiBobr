@@ -47,6 +47,9 @@ public class CarEnterExitSystem : MonoBehaviour
         rbCar.isKinematic = true;
         audioCar.mute = true;
         isFuelHas = false;
+
+        audioCar.mute = true;
+        audioSkid.mute = true;
     }
 
     // Update is called once per frame

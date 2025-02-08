@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ArcadeBikeController : MonoBehaviour
@@ -58,6 +59,11 @@ public class ArcadeBikeController : MonoBehaviour
         Visuals();
         AudioManager();
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            gameObject.transform.position = new Vector3(transform.position.x,7f,transform.position.z);
+        }
+
     }
     public void AudioManager()
     {
@@ -89,7 +95,7 @@ public class ArcadeBikeController : MonoBehaviour
             //turnlogic
             float sign = Mathf.Sign(carVelocity.z);
             float TurnMultiplyer = turnCurve.Evaluate(carVelocity.magnitude/ MaxSpeed);
-            if (verticalInput > 0.1f || carVelocity.z >1)
+            if (verticalInput > 0.1f || carVelocity.z > 1)
             {
                 carBody.AddTorque(Vector3.up * horizontalInput * sign * turn*10* TurnMultiplyer);
             }
@@ -134,6 +140,8 @@ public class ArcadeBikeController : MonoBehaviour
         }
 
     }
+
+    
     public void Visuals()
     {
         Handle.localRotation = Quaternion.Slerp(Handle.localRotation, Quaternion.Euler(Handle.localRotation.eulerAngles.x,
@@ -177,7 +185,7 @@ public class ArcadeBikeController : MonoBehaviour
 
         else if(GroundCheck == groundCheck.sphereCaste)
         {
-            if (Physics.SphereCast(origin, radius + 0.1f, direction, out hit, maxdistance, drivableSurface))
+            if (Physics.SphereCast(origin, radius + 0.15f, direction, out hit, maxdistance, drivableSurface))
             {
                 return true;
 
