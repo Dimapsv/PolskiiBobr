@@ -16,6 +16,8 @@ public class QuestManager : MonoBehaviour
     public bool chickenFermerQuestCleared;
     public bool lesopilkaQuestCleared;
     public bool mommyQuestCleared;
+    public bool motoQuestCleared;
+    public bool majorQuestCleared;
 
     public List<bool> listOfBobrStone = new List<bool>() { false, false, false, false, false };
 
@@ -29,11 +31,13 @@ public class QuestManager : MonoBehaviour
     public GameObject SpawnerPushUpgrade;
     public GameObject SpawnerFuel;
     public GameObject SpawnerLesopilkaTree;
+    public GameObject SpawnerMajorTree;
 
     private void OnEnable()
     {
         ThirdPersonController.OnLesopilkaTreeTaked.AddListener(CheckLesopilkaTreeCount);
         Mommy.OnForbiddenBoyHasChanged.AddListener(CheckMommyQuest);
+        GarageSergei.OnMotoHasChanged.AddListener(CheckMotoQuest);
 
         PlayerManager.OnBrevnoValueChanged.AddListener(CheckBrevnoCount);
         PlayerManager.OnBallHasChanged.AddListener(CheckBoyBallHaving);
@@ -45,6 +49,7 @@ public class QuestManager : MonoBehaviour
     {
         ThirdPersonController.OnLesopilkaTreeTaked.AddListener(CheckLesopilkaTreeCount);
         Mommy.OnForbiddenBoyHasChanged.RemoveListener(CheckMommyQuest);
+        GarageSergei.OnMotoHasChanged.RemoveListener(CheckMotoQuest);
 
         PlayerManager.OnBrevnoValueChanged.RemoveListener(CheckBrevnoCount);
         PlayerManager.OnBallHasChanged.RemoveListener(CheckBoyBallHaving);
@@ -114,6 +119,16 @@ public class QuestManager : MonoBehaviour
                     return true;
                 else
                     return false;
+            case 6:
+                if (motoQuestCleared)
+                    return true;
+                else
+                    return false;
+            case 7:
+                if (majorQuestCleared)
+                    return true;
+                else
+                    return false;
 
 
 
@@ -150,6 +165,12 @@ public class QuestManager : MonoBehaviour
                     SpawnerLesopilkaTree.SetActive(true);
                 }
                 break;
+            case 7:
+                if (majorQuestCleared)
+                {
+                    SpawnerMajorTree.SetActive(true);
+                }
+                break;
             default: return;
         }
     }
@@ -177,6 +198,8 @@ public class QuestManager : MonoBehaviour
             ballForBoyQuestCleared = true;
         else
             ballForBoyQuestCleared = false;
+
+        CheckMajorQuest();
     }
 
 
@@ -232,6 +255,25 @@ public class QuestManager : MonoBehaviour
     public void CheckMommyQuest()
     {
         mommyQuestCleared = true;
+        CheckMajorQuest();
+    }
+
+    public void CheckMotoQuest()
+    {
+        motoQuestCleared = true;
+        CheckMajorQuest();
+    }
+
+    public void CheckMajorQuest()
+    {
+        if (motoQuestCleared && mommyQuestCleared && ballForBoyQuestCleared)
+        {
+            majorQuestCleared = true;
+        }
+        else
+        {
+            majorQuestCleared = false;
+        }
     }
 
 }

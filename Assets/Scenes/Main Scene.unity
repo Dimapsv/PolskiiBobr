@@ -29957,6 +29957,9 @@ MonoBehaviour:
   bobrStonesQuestCleared: 0
   chickenFermerQuestCleared: 0
   lesopilkaQuestCleared: 0
+  mommyQuestCleared: 0
+  motoQuestCleared: 0
+  majorQuestCleared: 0
   listOfBobrStone: 0000000000
   chickenCount: 0
   lesopilkaTreeCount: 0
@@ -29964,6 +29967,7 @@ MonoBehaviour:
   SpawnerPushUpgrade: {fileID: 1769654022}
   SpawnerFuel: {fileID: 1309463066}
   SpawnerLesopilkaTree: {fileID: 1863942808}
+  SpawnerMajorTree: {fileID: 1779130051}
 --- !u!1001 &724672077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39235,7 +39239,8 @@ Transform:
   m_LocalPosition: {x: 790.17, y: 5.04, z: 282.64}
   m_LocalScale: {x: 2.2299004, y: 2.2299004, z: 2.2299004}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1471551103}
   m_Father: {fileID: 1347609657}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49888,6 +49893,7 @@ Transform:
   - {fileID: 1769654023}
   - {fileID: 1309463067}
   - {fileID: 1863942809}
+  - {fileID: 1779130052}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65030,6 +65036,64 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470079564}
   m_Mesh: {fileID: -1550514412580984892, guid: 2e98410c621d76a488987d7e3c106803, type: 3}
+--- !u!1 &1471551102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471551103}
+  - component: {fileID: 1471551104}
+  - component: {fileID: 1471551105}
+  m_Layer: 0
+  m_Name: GarageCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1471551103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471551102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.71, y: 0, z: -3.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 905838587}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1471551104
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471551102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.99
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1471551105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471551102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8a0f46997d65e4d8cf1e3774769611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1472395012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3362483840777944140, guid: 4f796919bd9f10b4b9fe40f3ac6d2c94, type: 3}
@@ -71516,7 +71580,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657536068}
-  m_LocalRotation: {x: 0.16482268, y: -0.000000014697362, z: 0.0000000024560496, w: 0.98632324}
+  m_LocalRotation: {x: 0.1648227, y: 8.638836e-16, z: -7.07393e-17, w: 0.98632324}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -76027,6 +76091,53 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1779130051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779130052}
+  - component: {fileID: 1779130053}
+  m_Layer: 0
+  m_Name: SpawerMajorTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1779130052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779130051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 645.10345, y: 5.880538, z: 187.32552}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1152607470}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1779130053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779130051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1f1e86119184b43b4c120526891241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpawnPoints:
+  - {x: 645.1035, y: 5.880538, z: 187.3255}
+  objectToSpawn: {fileID: 3695957216524138712, guid: 0c34ac29ae2c5c54c8e24fd1cdae4a72, type: 3}
 --- !u!1 &1779467152 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ebfc9d11c0671c347a51d8cf6e6d7e08, type: 3}
@@ -105205,6 +105316,10 @@ PrefabInstance:
     - target: {fileID: 6028571239770271640, guid: 7e6e17cbac27c6d4fbc924f9326757a5, type: 3}
       propertyPath: m_Name
       value: Bike
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028571239770271640, guid: 7e6e17cbac27c6d4fbc924f9326757a5, type: 3}
+      propertyPath: m_TagString
+      value: Moto
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 875570982595595666, guid: 7e6e17cbac27c6d4fbc924f9326757a5, type: 3}
