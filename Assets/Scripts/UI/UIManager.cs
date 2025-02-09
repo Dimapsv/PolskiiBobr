@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
 
     public List<GameObject> noteButtons = new List<GameObject>();
     
+    public List<GameObject> questsInfo = new List<GameObject>();
 
     //fastTrevell
     public GameObject fastTrevelPanel;
@@ -46,6 +47,7 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
+        QuestManager.OnQuestTaked.AddListener(UIQuestAdd);
         FastTrevel.OnFastTrevelStaying.AddListener(UIFastTrevel);
 
         PlayerManager.OnHealthValueChanged.AddListener(UIHealthUpdate);
@@ -61,6 +63,8 @@ public class UIManager : MonoBehaviour
 
     private void OnDisable()
     {
+        QuestManager.OnQuestTaked.RemoveListener(UIQuestAdd);
+
         PlayerManager.OnHealthValueChanged.RemoveListener(UIHealthUpdate);
         PlayerManager.OnDamageTaked.RemoveListener(UIDamageTaking);
 
@@ -73,7 +77,12 @@ public class UIManager : MonoBehaviour
         FastTrevel.OnFastTrevelStaying.RemoveListener(UIFastTrevel);
 
     }
-        
+
+    public void UIQuestAdd(int idOfQuest)
+    {
+        questsInfo[idOfQuest].SetActive(true);
+    }
+
     public void UIHealthUpdate(int healthValue)
     {
         playerHealthText.text = healthValue.ToString();

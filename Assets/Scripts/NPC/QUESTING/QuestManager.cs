@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class QuestManager : MonoBehaviour
 {
+    public static UnityEvent<int> OnQuestTaked = new UnityEvent<int>();
+    public static UnityEvent<int> OnQuestCleared = new UnityEvent<int>();
+
     public static QuestManager instance;
     
     public List<Quest> currentQuests = new List<Quest>();
@@ -83,6 +86,12 @@ public class QuestManager : MonoBehaviour
     public void AddQuest(Quest quest)
     {
         currentQuests.Add(quest);
+        OnQuestTaked?.Invoke(quest.id);
+    }
+
+    public void ClearQuest(int idOfQuest)
+    { 
+        OnQuestCleared?.Invoke(idOfQuest);
     }
 
     public bool CheckQuest(int idOfQuest)
