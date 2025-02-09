@@ -32,6 +32,9 @@ public class UIManager : MonoBehaviour
     
     public List<GameObject> questsInfo = new List<GameObject>();
 
+    public List<GameObject> inventoryImages = new List<GameObject>();
+    public List<GameObject> inventoryEmptyImages = new List<GameObject>();
+
     //fastTrevell
     public GameObject fastTrevelPanel;
 
@@ -47,6 +50,8 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
+        PlayerManager.OnCollectablesTaked.AddListener(UIInventoryImagesUpdate);
+
         QuestManager.OnQuestTaked.AddListener(UIQuestAdd);
         FastTrevel.OnFastTrevelStaying.AddListener(UIFastTrevel);
 
@@ -63,6 +68,8 @@ public class UIManager : MonoBehaviour
 
     private void OnDisable()
     {
+        PlayerManager.OnCollectablesTaked.RemoveListener(UIInventoryImagesUpdate);
+
         QuestManager.OnQuestTaked.RemoveListener(UIQuestAdd);
 
         PlayerManager.OnHealthValueChanged.RemoveListener(UIHealthUpdate);
@@ -76,6 +83,12 @@ public class UIManager : MonoBehaviour
 
         FastTrevel.OnFastTrevelStaying.RemoveListener(UIFastTrevel);
 
+    }
+
+    public void UIInventoryImagesUpdate(int idOfImageInventory)
+    {
+        inventoryEmptyImages[idOfImageInventory].SetActive(false);
+        inventoryImages[idOfImageInventory].SetActive(true);
     }
 
     public void UIQuestAdd(int idOfQuest)

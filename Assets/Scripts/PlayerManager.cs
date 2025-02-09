@@ -28,6 +28,7 @@ public class PlayerManager : MonoBehaviour
 
     public static UnityEvent<bool> OnAxeHasChanged = new UnityEvent<bool>();
 
+    public static UnityEvent<int> OnCollectablesTaked = new UnityEvent<int>();
     // parameters
     public int playerHealth;
     public int playerBrevnoCount;
@@ -92,6 +93,7 @@ public class PlayerManager : MonoBehaviour
             case "Collactables":
                 Debug.Log("Collactables");
                 TakeCollactables(item.idOfCollactable);
+                OnCollectablesTaked?.Invoke(item.idOfCollactable);
                 break;
             case "Note":
                 Debug.Log("Notes");
