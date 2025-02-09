@@ -15,10 +15,13 @@ public class AI_PATROL : MonoBehaviour
     public enum AI_State { Patrol, Stay, Chase };
     public AI_State AI_Enemy;
 
+    public Animator anim;
+
     void Start()
     {
         AI_Agent = gameObject.GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -33,8 +36,17 @@ public class AI_PATROL : MonoBehaviour
             {
                 AI_Agent.speed = 5;
             }
+
+            if (gameObject.CompareTag("ForbiddenBoy"))
+            {
+                anim.SetBool("idle", false);
+                anim.SetBool("run", true);
+            }
+
             AI_Agent.isStopped = false;
-            gameObject.GetComponent<Animator>().SetBool("Move", true);
+            //gameObject.GetComponent<Animator>().SetBool("Move", true);
+            
+
             AI_Agent.SetDestination(WayPoints[Current_Patch].transform.position);
             float Patch_Dist = Vector3.Distance(WayPoints[Current_Patch].transform.position, gameObject.transform.position);
             if (Patch_Dist < 2)
@@ -45,13 +57,28 @@ public class AI_PATROL : MonoBehaviour
         }
         if (AI_Enemy == AI_State.Stay)
         {
-            gameObject.GetComponent<Animator>().SetBool("Move", false);
+            //gameObject.GetComponent<Animator>().SetBool("Move", false);
+            if (gameObject.CompareTag("ForbiddenBoy"))
+            {
+                anim.SetBool("idle", true);
+                anim.SetBool("run", false);
+            }
+            
             AI_Agent.isStopped = true;
         }
         if (AI_Enemy == AI_State.Chase)
         {
             AI_Agent.speed = 12;
-            gameObject.GetComponent<Animator>().SetBool("Move", true);
+            //gameObject.GetComponent<Animator>().SetBool("Move", true);
+
+            if (gameObject.CompareTag("ForbiddenBoy"))
+            {
+                anim.SetBool("idle", false);
+                anim.SetBool("run", true);
+            }
+
+            AI_Agent.isStopped = false;
+
             AI_Agent.SetDestination(Player.transform.position);
         }
 

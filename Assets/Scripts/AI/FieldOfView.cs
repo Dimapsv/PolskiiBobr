@@ -16,6 +16,10 @@ public class FieldOfView : MonoBehaviour
 
     public bool bobrIsHidden;
 
+    public bool isForbiddenBoy;
+
+    public AI_PATROL ai;
+
     private void OnEnable()
     {
         ThirdPersonController.OnBobrHiddenChanged.AddListener(CheckBobr);
@@ -29,6 +33,7 @@ public class FieldOfView : MonoBehaviour
     private void Start()
     {
         playerRef = GameObject.FindGameObjectWithTag("Player");
+        ai = gameObject.GetComponent<AI_PATROL>();
         StartCoroutine(FOVRoutine());
     }
 
@@ -44,8 +49,20 @@ public class FieldOfView : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (canSeePlayer == true) gameObject.GetComponent<AI_PATROL>().AI_Enemy = AI_PATROL.AI_State.Chase;
-        else gameObject.GetComponent<AI_PATROL>().AI_Enemy = AI_PATROL.AI_State.Patrol;
+        if (canSeePlayer == true)
+        {
+            ai.AI_Enemy = AI_PATROL.AI_State.Chase;
+        }
+        else if (canSeePlayer == false && isForbiddenBoy)
+        {
+            ai.AI_Enemy = AI_PATROL.AI_State.Stay;
+        }
+        else if (canSeePlayer == false)
+        {
+            ai.AI_Enemy = AI_PATROL.AI_State.Patrol;
+        } 
+
+        
     }
 
     private void FieldOfViewCheck()
