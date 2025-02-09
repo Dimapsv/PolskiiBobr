@@ -57,10 +57,14 @@ public class ThirdPersonController : MonoBehaviour
     public bool isAxeHas = false;
     public GameObject bobrAxe;
 
+    //animator
+    private Animator animator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         playerActionsAsset = new ThirpdPesonActionsAsset();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -113,6 +117,8 @@ public class ThirdPersonController : MonoBehaviour
 
         LookAt();
 
+        UpdateAnimations();
+
 
     }
 
@@ -150,6 +156,26 @@ public class ThirdPersonController : MonoBehaviour
                 isDashing = false;
                 dashTimer = 0f;
             }
+        }
+    }
+
+    private void UpdateAnimations()
+    {
+        // Проверяем, движется ли персонаж
+        bool isMoving = move.ReadValue<Vector2>().sqrMagnitude > 0.1f;
+
+        // Устанавливаем параметры аниматора
+        animator.SetBool("IsRunning", isMoving);
+        animator.SetBool("IsIdle", !isMoving);
+
+        // Если персонаж прыгает, устанавливаем параметр IsJumping
+        if (!isGrounded())
+        {
+            animator.SetBool("IsJumping", true);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", false);
         }
     }
 
