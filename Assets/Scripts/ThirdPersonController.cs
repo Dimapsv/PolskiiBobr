@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using Unity.VisualScripting;
+using UnityEditor.AnimatedValues;
 
 public class ThirdPersonController : MonoBehaviour
 {
@@ -59,6 +60,8 @@ public class ThirdPersonController : MonoBehaviour
 
     //animator
     private Animator animator;
+
+    
 
     private void Awake()
     {
@@ -145,6 +148,9 @@ public class ThirdPersonController : MonoBehaviour
             Interact();
         }
 
+        
+
+        
         // Update dash timer
         if (isDashing)
         {
@@ -158,6 +164,8 @@ public class ThirdPersonController : MonoBehaviour
             }
         }
     }
+
+    
 
     private void UpdateAnimations()
     {
@@ -310,6 +318,7 @@ public class ThirdPersonController : MonoBehaviour
             return false;
     }
 
+    
 
     IEnumerator Dash()
     {
@@ -364,6 +373,7 @@ public class ThirdPersonController : MonoBehaviour
             bobrIsHidden = false;
             OnBobrHiddenChanged.Invoke(bobrIsHidden);
         }
+
     }
 
     public void FastTrevel(int idOfRide)
@@ -384,4 +394,7 @@ public class ThirdPersonController : MonoBehaviour
                 break;
         }
     }
+
+    
+
 }
