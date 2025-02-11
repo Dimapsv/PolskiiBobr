@@ -6,25 +6,35 @@ using UnityEngine.Events;
 public class DamageScript : MonoBehaviour
 {
     [SerializeField] private int damageCount = 1;
-    
+    [SerializeField] private float cooldownDuration = 2f; // Cooldown duration in seconds
+
     public static UnityEvent<int> OnDealingDamage = new UnityEvent<int>();
-        
-        
+
+    [SerializeField]
+    public bool isOnCooldown = false;
+    
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-            StartCoroutine(Damage(damageCount));
+        if (other.CompareTag("Player") && !isOnCooldown)
+        {
+            StartCoroutine(DamageWithCooldown(damageCount));
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-            StopCoroutine(Damage(damageCount));
+        {
+            StopCoroutine(DamageWithCooldown(damageCount));
+        }
     }
 
-    public IEnumerator Damage(int damageCount)
+    private IEnumerator DamageWithCooldown(int damageCount)
     {
+        isOnCooldown = true;
         OnDealingDamage.Invoke(damageCount);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(cooldownDuration);
+        isOnCooldown = false;
     }
 }

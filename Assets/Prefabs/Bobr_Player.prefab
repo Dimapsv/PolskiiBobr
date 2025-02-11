@@ -523,6 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repelForce: 40
   animBobr: {fileID: 7910674462150126441}
+  cooldownDuration: 1
   enemyCollider: {fileID: 0}
 --- !u!135 &1048835162
 SphereCollider:
@@ -971,7 +972,7 @@ GameObject:
   - component: {fileID: 1917825259780353620}
   - component: {fileID: 1917825259780353618}
   - component: {fileID: 1917825259780353622}
-  - component: {fileID: 2484665389999257235}
+  - component: {fileID: 6148915917867810464}
   m_Layer: 8
   m_Name: Bobr_Player
   m_TagString: Player
@@ -1047,8 +1048,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6604757, y: 3.07, z: 5.363012}
-  m_Center: {x: -0.03055334, y: 1.51, z: 0.1273039}
+  m_Size: {x: 1.341413, y: 2.7347033, z: 4.5627856}
+  m_Center: {x: -0.005385379, y: 1.3423517, z: 0.3060917}
 --- !u!81 &1917825259780353618
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1087,19 +1088,20 @@ MonoBehaviour:
   inConversation: 0
   isAxeHas: 0
   bobrAxe: {fileID: 4369275775972562168}
---- !u!135 &2484665389999257235
-SphereCollider:
+--- !u!136 &6148915917867810464
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3486807535841438633}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.82
-  m_Center: {x: 0, y: 1.49, z: 0}
+  m_Radius: 1.6390704
+  m_Height: 4.965413
+  m_Direction: 2
+  m_Center: {x: 0.02000014, y: 1.1951001, z: 0.1607259}
 --- !u!1 &3535682383143355306
 GameObject:
   m_ObjectHideFlags: 0
