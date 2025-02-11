@@ -31,7 +31,7 @@ public class Slam : MonoBehaviour
     }
 
     // Когда враг входит в зону коллайдера
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Enemy")) // Проверяем тег врага
         {
