@@ -27,6 +27,13 @@ public class ThirdPersonController : MonoBehaviour
     private float jumpForce = 5f;
     [SerializeField]
     private float maxSpeed = 5f;
+
+    [SerializeField]
+    private float movementForceWalk;
+
+    [SerializeField]
+    private float movementForceRun;
+
     private Vector3 forceDirection = Vector3.zero;
 
 
@@ -73,6 +80,7 @@ public class ThirdPersonController : MonoBehaviour
     private void Start()
     {
         bobrAxe.SetActive(false);
+        movementForce = movementForceWalk;
     }
 
     private void OnEnable()
@@ -129,9 +137,19 @@ public class ThirdPersonController : MonoBehaviour
     private void Update()
     {
         // Check for input and initiate dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && isDashingUpgraded)
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && isDashingUpgraded)
+        //{
+        //    StartCoroutine(Dash());
+        //}
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            StartCoroutine(Dash());
+            movementForce = movementForceRun;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            movementForce = movementForceWalk;
         }
 
         if (Input.GetKeyDown(KeyCode.F))
@@ -264,6 +282,7 @@ public class ThirdPersonController : MonoBehaviour
                 break;
         }
     }
+
     void JoinConversation()
     {
         inConversation = true;

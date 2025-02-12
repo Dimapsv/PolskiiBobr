@@ -58,18 +58,22 @@ public class Slam : MonoBehaviour
     public void RepelEnemyObject()
     {
         // Получаем направление от игрока к врагу
-        Vector3 repelDirection = enemyCollider.transform.position - transform.position;
-        repelDirection.Normalize();
-
-        // Применяем силу к врагу
-        Rigidbody enemyRigidbody = enemyCollider.GetComponent<Rigidbody>();
-        if (enemyRigidbody != null)
+        if (enemyCollider != null)
         {
-            
-            enemyRigidbody.AddForce(repelDirection * repelForce, ForceMode.Impulse);
-            enemyCollider = null;
+            Vector3 repelDirection = enemyCollider.transform.position - transform.position;
+            repelDirection.Normalize();
 
+            // Применяем силу к врагу
+            Rigidbody enemyRigidbody = enemyCollider.GetComponent<Rigidbody>();
+            if (enemyRigidbody != null)
+            {
+
+                enemyRigidbody.AddForce(repelDirection * repelForce, ForceMode.Impulse);
+                enemyCollider = null;
+
+            }
         }
+        
 
     }
 
