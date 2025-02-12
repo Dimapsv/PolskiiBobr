@@ -35,6 +35,8 @@ public class QuestManager : MonoBehaviour
     public GameObject SpawnerFuel;
     public GameObject SpawnerLesopilkaTree;
     public GameObject SpawnerMajorTree;
+    public GameObject SpawnerRegeneration;
+    public GameObject SpawnerWaterRun;
 
     private void OnEnable()
     {
@@ -178,6 +180,18 @@ public class QuestManager : MonoBehaviour
                 if (majorQuestCleared)
                 {
                     SpawnerMajorTree.SetActive(true);
+                }
+                break;
+            case 5:
+                if (mommyQuestCleared)
+                {
+                    SpawnerRegeneration.SetActive(true);
+                }
+                break;
+            case 6:
+                if (motoQuestCleared)
+                {
+                    SpawnerWaterRun.SetActive(true);
                 }
                 break;
             default: return;
