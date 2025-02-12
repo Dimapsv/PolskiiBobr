@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3f6c01d01280844eadbbd13e68c9663
+guid: e9d3898e3824aa2488548a185435002e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -153,13 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MAP_DIALOG_ZAPISKI_0
+      name: Dialogue Window_0
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
-        width: 384
-        height: 320
+        x: 264
+        y: 256
+        width: 816
+        height: 448
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,134 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1271b9956e8461468ab32342833f12a
-      internalID: 141257114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MAP_DIALOG_ZAPISKI_1
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 640
-        width: 384
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9096df258accbe4ab6b3c249bfb74bd
-      internalID: 227063962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MAP_DIALOG_ZAPISKI_2
-      rect:
-        serializedVersion: 2
-        x: 668
-        y: 484
-        width: 69
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6aa5300bd49cca4ba24c0a2d300ee2a
-      internalID: 993761406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MAP_DIALOG_ZAPISKI_3
-      rect:
-        serializedVersion: 2
-        x: 851
-        y: 484
-        width: 68
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91cb828c07fd956478cc8597b454cf06
-      internalID: 542611957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MAP_DIALOG_ZAPISKI_4
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 130
-        width: 100
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a21d9ace41e774a41bebf8805d0be6fb
-      internalID: -115265386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MAP_DIALOG_ZAPISKI_5
-      rect:
-        serializedVersion: 2
-        x: 268
-        y: 130
-        width: 100
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ea1c42fc8ad2a9468e83f10a3bb2eb6
-      internalID: 1348378781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MAP_DIALOG_ZAPISKI_6
-      rect:
-        serializedVersion: 2
-        x: 527
-        y: 50
-        width: 432
-        height: 305
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fb80cff80155e24db0cf2f3c5993b2d
-      internalID: -817609219
+      spriteID: 2210e0fa2020bec45be5da6e247711e7
+      internalID: 2000746187
       vertices: []
       indices: 
       edges: []
@@ -302,7 +176,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2b0dad0c276df764bbe138f1511ea9d0
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -310,13 +184,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MAP_DIALOG_ZAPISKI_0: 141257114
-      MAP_DIALOG_ZAPISKI_1: 227063962
-      MAP_DIALOG_ZAPISKI_2: 993761406
-      MAP_DIALOG_ZAPISKI_3: 542611957
-      MAP_DIALOG_ZAPISKI_4: -115265386
-      MAP_DIALOG_ZAPISKI_5: 1348378781
-      MAP_DIALOG_ZAPISKI_6: -817609219
+      Dialogue Window_0: 2000746187
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
