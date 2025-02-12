@@ -87,6 +87,7 @@ public class UIManager : MonoBehaviour
 
     public void UIInventoryImagesUpdate(int idOfImageInventory)
     {
+
         inventoryEmptyImages[idOfImageInventory].SetActive(false);
         inventoryImages[idOfImageInventory].SetActive(true);
     }

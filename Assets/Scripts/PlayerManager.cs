@@ -31,6 +31,8 @@ public class PlayerManager : MonoBehaviour
     public static UnityEvent<int> OnCollectablesTaked = new UnityEvent<int>();
 
     public static UnityEvent<bool> OnRegenerationChanged = new UnityEvent<bool>();
+
+    public static UnityEvent<int> OnCoinValueChanged = new UnityEvent<int>();
     // parameters
     public int playerHealth;
     public int playerBrevnoCount;
@@ -51,7 +53,11 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject[] waterObjectsDanger;
     public GameObject[] waterObjectsSaveFul;
-    
+
+    // coin
+    public int coinCount;
+
+
     private void OnEnable()
     {
         DamageScript.OnDealingDamage.AddListener(TakeDamage);
@@ -120,7 +126,13 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("Chicken");
                 TakeChicken();
                 break;
-            
+            case "Coin":
+                Debug.Log("Coin");
+                TakeCoin();
+                OnCoinValueChanged?.Invoke(coinCount);
+                break;
+
+
 
         }
             
@@ -189,11 +201,15 @@ public class PlayerManager : MonoBehaviour
                 TurnOnWaterRun();
                 Debug.Log("Water run is Taked");
                 break;
-
-
+            
         }
     }
 
+    private void TakeCoin()
+    {
+        coinCount++;
+        Debug.Log("Coin is taked");
+    }
 
     private void TakeNote(int idOfNote)
     {

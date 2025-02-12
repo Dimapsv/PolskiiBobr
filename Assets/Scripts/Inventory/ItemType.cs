@@ -6,6 +6,8 @@ public enum ItemType
     Ability,
     BobrStones,
     Note,
-    Chicken
+    Chicken,
+    Coin
+    
     
 }
