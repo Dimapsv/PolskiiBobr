@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d3119dd541e614b834391363739d76, type: 3}
+  m_Name: Regeneration
+  m_EditorClassIdentifier: 
+  itemType: 2
+  itemName: Regen
+  icon: {fileID: -999349279, guid: a0280a77f4d5e9c4fa2f32bed0f9d8a7, type: 3}
+  countOfTree: 0
+  valueOfHealth: 0
+  idOfCollactable: 4
+  idOfAblity: 0
+  idOfBobrStone: 0
+  idOfNote: 0

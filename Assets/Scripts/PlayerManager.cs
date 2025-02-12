@@ -29,6 +29,8 @@ public class PlayerManager : MonoBehaviour
     public static UnityEvent<bool> OnAxeHasChanged = new UnityEvent<bool>();
 
     public static UnityEvent<int> OnCollectablesTaked = new UnityEvent<int>();
+
+    public static UnityEvent<bool> OnRegenerationChanged = new UnityEvent<bool>();
     // parameters
     public int playerHealth;
     public int playerBrevnoCount;
@@ -42,6 +44,13 @@ public class PlayerManager : MonoBehaviour
     public bool fuelTankHas;
 
     public bool axeHas;
+
+    // abilities
+    public bool isRegenerationHas;
+    public bool isWaterRunHas;
+
+    public GameObject[] waterObjectsDanger;
+    public GameObject[] waterObjectsSaveFul;
     
     private void OnEnable()
     {
@@ -61,9 +70,10 @@ public class PlayerManager : MonoBehaviour
         ballForBoyHas = false;
         fuelTankHas = false;
         axeHas = false;
+        isRegenerationHas = false;
+        isWaterRunHas = false;
         playerBrevnoCount = 0;
         playerHealth = 5;
-
 
 
         OnHealthValueChanged?.Invoke(playerHealth);
@@ -80,7 +90,6 @@ public class PlayerManager : MonoBehaviour
         string itemType = item.itemType.ToString();
         switch (itemType)
         {
-
             case "Tree":
                 TakeBrevno(item.countOfTree);
                 Debug.Log("It's Tree");
@@ -113,8 +122,6 @@ public class PlayerManager : MonoBehaviour
                 break;
             
 
-
-
         }
             
     }
@@ -134,7 +141,10 @@ public class PlayerManager : MonoBehaviour
 
     private void TakeHealth(int healthValueChange)
     {
-        playerHealth += healthValueChange;
+        if (playerHealth < 10)
+        {
+            playerHealth += healthValueChange;
+        }
         OnHealthValueChanged?.Invoke(playerHealth);
     }
 
@@ -167,9 +177,23 @@ public class PlayerManager : MonoBehaviour
                 axeHas = true;
                 OnAxeHasChanged?.Invoke(axeHas);
                 Debug.Log("AxeTaked");
-                break; 
+                break;
+            case 4:
+                isRegenerationHas = true;
+                StartCoroutine(StartRegeneration());
+                OnRegenerationChanged?.Invoke(isRegenerationHas);
+                Debug.Log("Regen is taked");
+                break;
+            case 5:
+                isWaterRunHas = true;
+                TurnOnWaterRun();
+                Debug.Log("Water run is Taked");
+                break;
+
+
         }
     }
+
 
     private void TakeNote(int idOfNote)
     {
@@ -192,7 +216,29 @@ public class PlayerManager : MonoBehaviour
         OnChickenTaked?.Invoke();
     }
 
-    
+
+    IEnumerator StartRegeneration()
+    {
+        while (true)
+        {
+            TakeHealth(1);
+            yield return new WaitForSeconds(30f);
+        }
+        
+    }
+
+    private void TurnOnWaterRun()
+    {
+        foreach (GameObject wtr in waterObjectsDanger)
+        {
+            wtr.SetActive(false);
+        }
+
+        foreach (GameObject wtr in waterObjectsSaveFul)
+        {
+            wtr.SetActive(true);
+        }
 
 
+    }
 }

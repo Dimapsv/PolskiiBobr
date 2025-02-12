@@ -12,6 +12,8 @@ public class Slam : MonoBehaviour
     public Collider enemyCollider; // Коллайдер врага, который находится в зоне
     private float lastAttackTime = 0f; // Время последней атаки
 
+    public CapsuleCollider bobrCollider;
+
 
     void Update()
     {
@@ -26,6 +28,7 @@ public class Slam : MonoBehaviour
 
             if (enemyCollider != null)
             {
+                bobrCollider.enabled = false;
                 Invoke("RepelEnemyObject", 0.3f);
             }
             
@@ -62,16 +65,20 @@ public class Slam : MonoBehaviour
         Rigidbody enemyRigidbody = enemyCollider.GetComponent<Rigidbody>();
         if (enemyRigidbody != null)
         {
-            enemyRigidbody.AddForce(repelDirection * repelForce, ForceMode.Impulse);
             
+            enemyRigidbody.AddForce(repelDirection * repelForce, ForceMode.Impulse);
+            enemyCollider = null;
+
         }
 
     }
 
     public void TurnOffAnim()
     {
+        
         animBobr.SetBool("IsSlaming", false);
-       
+        bobrCollider.enabled = true;
+
     }
 
 }
