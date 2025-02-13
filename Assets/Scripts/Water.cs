@@ -5,12 +5,13 @@ using UnityEngine;
 public class Water : MonoBehaviour
 {
     public Transform respawnPoint;
+    public GameObject playerObject;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.gameObject.transform.position = respawnPoint.position;
+            playerObject.transform.position = respawnPoint.position;
         }
     }
 }

@@ -11,18 +11,22 @@ public class LillyRose : MonoBehaviour
     private Vector3 initialPosition;
     private bool isMoving = false;
 
+    
     void Start()
     {
         initialPosition = transform.position;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player") && !isMoving)
+        if (other.gameObject.CompareTag("Player") && !isMoving)
         {
             StartCoroutine(MoveObject());
         }
     }
+
+    
+
 
     private IEnumerator MoveObject()
     {
