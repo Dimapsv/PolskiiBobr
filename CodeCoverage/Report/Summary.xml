@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>15.02.2025 - 18:44:41</Generatedon>
+    <Parser>MultiReportParser (4x OpenCoverParser)</Parser>
+    <Assemblies>6</Assemblies>
+    <Classes>102</Classes>
+    <Files>99</Files>
+    <Coveredlines>710</Coveredlines>
+    <Uncoveredlines>5796</Uncoveredlines>
+    <Coverablelines>6506</Coverablelines>
+    <Totallines>13609</Totallines>
+    <Linecoverage>10.9</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>151</Coveredmethods>
+    <Totalmethods>837</Totalmethods>
+    <Methodcoverage>18</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="Assembly-CSharp" classes="54" coverage="34.2" coveredlines="707" coverablelines="2065" totallines="4315" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="149" totalmethods="305" methodcoverage="48.8">
+      <Class name="AI_PATROL" coverage="66" coveredlines="33" coverablelines="50" totallines="86" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="ArcadeBikeController" coverage="23.2" coveredlines="29" coverablelines="125" totallines="225" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="9" methodcoverage="44.4" />
+      <Class name="BikerAnimation" coverage="0" coveredlines="0" coverablelines="93" totallines="162" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="BULL" coverage="25.9" coveredlines="7" coverablelines="27" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="5" methodcoverage="40" />
+      <Class name="CarEnterExitSystem" coverage="33.8" coveredlines="23" coverablelines="68" totallines="137" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="7" methodcoverage="71.4" />
+      <Class name="DamageScript" coverage="13.6" coveredlines="3" coverablelines="22" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="5" methodcoverage="20" />
+      <Class name="DashAbility" coverage="0" coveredlines="0" coverablelines="4" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Dashing" coverage="0" coveredlines="0" coverablelines="7" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="DavidJalbert.LowPolyPeople.AnimationController" coverage="0" coveredlines="0" coverablelines="37" totallines="65" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
+      <Class name="DialogueManager" coverage="17.1" coveredlines="6" coverablelines="35" totallines="73" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="5" methodcoverage="20" />
+      <Class name="FastTrevel" coverage="16.6" coveredlines="3" coverablelines="18" totallines="34" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="4" methodcoverage="25" />
+      <Class name="FieldOfView" coverage="64.1" coveredlines="34" coverablelines="53" totallines="98" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="7" methodcoverage="85.7" />
+      <Class name="FieldOfViewEditor" coverage="0" coveredlines="0" coverablelines="19" totallines="35" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="GameManager" coverage="36.2" coveredlines="21" coverablelines="58" totallines="144" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="13" methodcoverage="46.1" />
+      <Class name="GarageSergei" coverage="0" coveredlines="0" coverablelines="7" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Item" coverage="37.5" coveredlines="3" coverablelines="8" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="LillyRose" coverage="19.4" coveredlines="7" coverablelines="36" totallines="66" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="4" methodcoverage="50" />
+      <Class name="MainMenu" coverage="0" coveredlines="0" coverablelines="3" totallines="12" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="MessageManager" coverage="38.4" coveredlines="10" coverablelines="26" totallines="56" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="5" methodcoverage="60" />
+      <Class name="Mommy" coverage="25" coveredlines="3" coverablelines="12" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="MouseLook" coverage="0" coveredlines="0" coverablelines="13" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="NPC" coverage="100" coveredlines="4" coverablelines="4" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="PlayerManager" coverage="16.1" coveredlines="24" coverablelines="149" totallines="260" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="16" methodcoverage="18.7" />
+      <Class name="PlayerMovement" coverage="0" coveredlines="0" coverablelines="28" totallines="53" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Pushing" coverage="20" coveredlines="4" coverablelines="20" totallines="35" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="PushingUpgrade" coverage="0" coveredlines="0" coverablelines="7" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="QuestCheker" coverage="0" coveredlines="0" coverablelines="4" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="QuestManager" coverage="28.3" coveredlines="51" coverablelines="180" totallines="302" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="18" methodcoverage="44.4" />
+      <Class name="RectangleTrainer.Compass.CardinalDirections" coverage="100" coveredlines="1" coverablelines="1" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="RectangleTrainer.Compass.UI.ACompass" coverage="72.2" coveredlines="60" coverablelines="83" totallines="132" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="9" methodcoverage="88.8" />
+      <Class name="RectangleTrainer.Compass.UI.ACompassElement" coverage="100" coveredlines="3" coverablelines="3" totallines="15" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="RectangleTrainer.Compass.UI.ADirectionIcon" coverage="100" coveredlines="1" coverablelines="1" totallines="9" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="RectangleTrainer.Compass.UI.ATrackableIcon" coverage="66.6" coveredlines="4" coverablelines="6" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="RectangleTrainer.Compass.UI.DirectionIcon" coverage="100" coveredlines="17" coverablelines="17" totallines="34" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="5" methodcoverage="100" />
+      <Class name="RectangleTrainer.Compass.UI.ImageIcon" coverage="81.8" coveredlines="18" coverablelines="22" totallines="42" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="7" methodcoverage="85.7" />
+      <Class name="RectangleTrainer.Compass.UI.LetterIcon" coverage="50" coveredlines="4" coverablelines="8" totallines="21" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="RectangleTrainer.Compass.UI.SimpleUICompass" coverage="100" coveredlines="14" coverablelines="14" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="RectangleTrainer.Compass.Util.BillboardLabel" coverage="100" coveredlines="7" coverablelines="7" totallines="21" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="RectangleTrainer.Compass.World.North" coverage="67.8" coveredlines="19" coverablelines="28" totallines="66" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100" />
+      <Class name="RectangleTrainer.Compass.World.Trackable" coverage="83.3" coveredlines="15" coverablelines="18" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="9" methodcoverage="88.8" />
+      <Class name="RectangleTrainer.Compass.World.Tracker" coverage="80.4" coveredlines="33" coverablelines="41" totallines="67" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="8" methodcoverage="87.5" />
+      <Class name="RectangleTrainer.Mesh2Script.ScriptMesh.Cardinal_ScriptMesh" coverage="89.4" coveredlines="34" coverablelines="38" totallines="221" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="9" totalmethods="9" methodcoverage="100" />
+      <Class name="SkidMarks" coverage="81.2" coveredlines="26" coverablelines="32" totallines="57" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="Slam" coverage="20" coveredlines="9" coverablelines="45" totallines="88" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="6" methodcoverage="50" />
+      <Class name="SoundRandomizer" coverage="75" coveredlines="9" coverablelines="12" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="Spawner" coverage="100" coveredlines="4" coverablelines="4" totallines="15" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="Spin" coverage="100" coveredlines="3" coverablelines="3" totallines="12" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="ThirdPersonController" coverage="43.3" coveredlines="107" coverablelines="247" totallines="433" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="14" totalmethods="24" methodcoverage="58.3" />
+      <Class name="ThirpdPesonActionsAsset" coverage="20.2" coveredlines="17" coverablelines="84" totallines="271" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="9" totalmethods="30" methodcoverage="30" />
+      <Class name="UIManager" coverage="39.7" coveredlines="37" coverablelines="93" totallines="200" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="17" methodcoverage="41.1" />
+      <Class name="UnityTemplateProjects.SimpleCameraController" coverage="0" coveredlines="0" coverablelines="126" totallines="301" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="16" methodcoverage="0" />
+      <Class name="Visable" coverage="0" coveredlines="0" coverablelines="7" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="Water" coverage="0" coveredlines="0" coverablelines="6" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="WaterDeath" coverage="0" coveredlines="0" coverablelines="6" totallines="15" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+    </Assembly>
+    <Assembly name="Assembly-CSharp-Editor" classes="4" coverage="1.3" coveredlines="3" coverablelines="230" totallines="389" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="23" methodcoverage="8.6">
+      <Class name="ArcadeBikeCreator" coverage="0" coveredlines="0" coverablelines="82" totallines="132" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="BikerAnimationCreator" coverage="0" coveredlines="0" coverablelines="28" totallines="60" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="ReadmeEditor" coverage="3" coveredlines="3" coverablelines="98" totallines="156" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="13" methodcoverage="15.3" />
+      <Class name="RectangleTrainer.Compass.Inspector.TrackableEditor" coverage="0" coveredlines="0" coverablelines="22" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+    </Assembly>
+    <Assembly name="Assembly-CSharp-firstpass" classes="22" coverage="0" coveredlines="0" coverablelines="1659" totallines="4181" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="273" methodcoverage="0">
+      <Class name="DG.Tweening.DOTweenCYInstruction" coverage="0" coveredlines="0" coverablelines="44" totallines="389" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="12" methodcoverage="0" />
+      <Class name="DG.Tweening.DOTweenModuleAudio" coverage="0" coveredlines="0" coverablelines="56" totallines="198" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="15" methodcoverage="0" />
+      <Class name="DG.Tweening.DOTweenModulePhysics" coverage="0" coveredlines="0" coverablelines="83" totallines="216" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+      <Class name="DG.Tweening.DOTweenModulePhysics2D" coverage="0" coveredlines="0" coverablelines="76" totallines="193" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="9" methodcoverage="0" />
+      <Class name="DG.Tweening.DOTweenModuleSprite" coverage="0" coveredlines="0" coverablelines="34" totallines="93" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="DG.Tweening.DOTweenModuleUI" coverage="0" coveredlines="0" coverablelines="268" totallines="662" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="43" methodcoverage="0" />
+      <Class name="DG.Tweening.DOTweenModuleUnityVersion" coverage="0" coveredlines="0" coverablelines="118" totallines="389" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="16" methodcoverage="0" />
+      <Class name="DG.Tweening.DOTweenModuleUtils" coverage="0" coveredlines="0" coverablelines="46" totallines="167" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Characters.FirstPerson.FirstPersonController" coverage="0" coveredlines="0" coverablelines="137" totallines="260" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="12" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Characters.FirstPerson.HeadBob" coverage="0" coveredlines="0" coverablelines="24" totallines="55" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Characters.FirstPerson.MouseLook" coverage="0" coveredlines="0" coverablelines="72" totallines="115" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController" coverage="0" coveredlines="0" coverablelines="139" totallines="265" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="17" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Characters.ThirdPerson.AICharacterControl" coverage="0" coveredlines="0" coverablelines="18" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter" coverage="0" coveredlines="0" coverablelines="130" totallines="225" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl" coverage="0" coveredlines="0" coverablelines="32" totallines="75" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager" coverage="0" coveredlines="0" coverablelines="133" totallines="318" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="47" methodcoverage="0" />
+      <Class name="UnityStandardAssets.CrossPlatformInput.PlatformSpecific.MobileInput" coverage="0" coveredlines="0" coverablelines="79" totallines="133" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="13" methodcoverage="0" />
+      <Class name="UnityStandardAssets.CrossPlatformInput.PlatformSpecific.StandaloneInput" coverage="0" coveredlines="0" coverablelines="27" totallines="79" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+      <Class name="UnityStandardAssets.CrossPlatformInput.VirtualInput" coverage="0" coveredlines="0" coverablelines="60" totallines="134" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="13" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Utility.CurveControlledBob" coverage="0" coveredlines="0" coverablelines="24" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Utility.FOVKick" coverage="0" coveredlines="0" coverablelines="38" totallines="73" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="UnityStandardAssets.Utility.LerpControlledBob" coverage="0" coveredlines="0" coverablelines="21" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+    </Assembly>
+    <Assembly name="sc.stylizedgrass.demo.runtime" classes="3" coverage="0" coveredlines="0" coverablelines="96" totallines="178" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="13" methodcoverage="0">
+      <Class name="StylizedGrassDemo.MoveInCircle" coverage="0" coveredlines="0" coverablelines="21" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="StylizedGrassDemo.OrbitCamera" coverage="0" coveredlines="0" coverablelines="43" totallines="87" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="StylizedGrassDemo.PlayerController" coverage="0" coveredlines="0" coverablelines="32" totallines="53" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+    </Assembly>
+    <Assembly name="sc.stylizedgrass.editor" classes="11" coverage="0" coveredlines="0" coverablelines="1414" totallines="3886" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="113" methodcoverage="0">
+      <Class name="StylizedGrass.AssetInfo" coverage="0" coveredlines="0" coverablelines="65" totallines="254" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+      <Class name="StylizedGrass.ColorMapInspector" coverage="0" coveredlines="0" coverablelines="52" totallines="90" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="StylizedGrass.GrassBenderInspector" coverage="0" coveredlines="0" coverablelines="100" totallines="182" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="StylizedGrass.GrassColorMapRendererInspector" coverage="0" coveredlines="0" coverablelines="364" totallines="562" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="24" methodcoverage="0" />
+      <Class name="StylizedGrass.KeywordStripper" coverage="0" coveredlines="0" coverablelines="59" totallines="418" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="9" methodcoverage="0" />
+      <Class name="StylizedGrass.MaterialUI" coverage="0" coveredlines="0" coverablelines="356" totallines="694" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="18" methodcoverage="0" />
+      <Class name="StylizedGrass.MinMaxSlider" coverage="0" coveredlines="0" coverablelines="32" totallines="694" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="StylizedGrass.ShaderConfigurator" coverage="0" coveredlines="0" coverablelines="116" totallines="418" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="StylizedGrass.StylizedGrassEditor" coverage="0" coveredlines="0" coverablelines="29" totallines="61" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="StylizedGrass.StylizedGrassGUI" coverage="0" coveredlines="0" coverablelines="147" totallines="354" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="20" methodcoverage="0" />
+      <Class name="StylizedGrass.StylizedGrassRendererInspector" coverage="0" coveredlines="0" coverablelines="94" totallines="159" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+    </Assembly>
+    <Assembly name="sc.stylizedgrass.runtime" classes="8" coverage="0" coveredlines="0" coverablelines="1042" totallines="2161" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="110" methodcoverage="0">
+      <Class name="StylizedGrass.ColorMapRendering" coverage="0" coveredlines="0" coverablelines="405" totallines="743" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="23" methodcoverage="0" />
+      <Class name="StylizedGrass.GrassBender" coverage="0" coveredlines="0" coverablelines="150" totallines="302" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="15" methodcoverage="0" />
+      <Class name="StylizedGrass.GrassColorMap" coverage="0" coveredlines="0" coverablelines="30" totallines="70" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="StylizedGrass.GrassColorMapRenderer" coverage="0" coveredlines="0" coverablelines="65" totallines="171" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="13" methodcoverage="0" />
+      <Class name="StylizedGrass.GrassMaskingSphere" coverage="0" coveredlines="0" coverablelines="18" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="StylizedGrass.GrassRenderFeature" coverage="0" coveredlines="0" coverablelines="160" totallines="374" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="26" methodcoverage="0" />
+      <Class name="StylizedGrass.PipelineUtilities" coverage="0" coveredlines="0" coverablelines="117" totallines="255" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+      <Class name="StylizedGrass.StylizedGrassRenderer" coverage="0" coveredlines="0" coverablelines="97" totallines="201" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="12" methodcoverage="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

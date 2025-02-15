@@ -68,6 +68,9 @@ public class ThirdPersonController : MonoBehaviour
     //animator
     private Animator animator;
 
+    //guideLabels
+    public GameObject pressEToTalkLabel;
+
     
 
     private void Awake()
@@ -80,6 +83,7 @@ public class ThirdPersonController : MonoBehaviour
     private void Start()
     {
         bobrAxe.SetActive(false);
+        pressEToTalkLabel.SetActive(false);
         movementForce = movementForceWalk;
     }
 
@@ -383,6 +387,11 @@ public class ThirdPersonController : MonoBehaviour
             bobrIsHidden = true;
             OnBobrHiddenChanged.Invoke(bobrIsHidden);
         }
+
+        if (other.CompareTag("NPC"))
+        {
+            pressEToTalkLabel.SetActive(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -391,6 +400,11 @@ public class ThirdPersonController : MonoBehaviour
         {
             bobrIsHidden = false;
             OnBobrHiddenChanged.Invoke(bobrIsHidden);
+        }
+
+        if (other.CompareTag("NPC"))
+        {
+            pressEToTalkLabel.SetActive(false);
         }
 
     }

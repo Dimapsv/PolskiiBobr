@@ -12,6 +12,7 @@ TagManager:
   - Chicken
   - ForbiddenBoy
   - Moto
+  - NPC
   layers:
   - Default
   - TransparentFX

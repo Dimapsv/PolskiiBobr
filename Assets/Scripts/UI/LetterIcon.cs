@@ -5,7 +5,7 @@ namespace RectangleTrainer.Compass.UI
 {
     public class LetterIcon : ImageIcon
     {
-        [SerializeField] protected char letter;
+        [SerializeField] protected string letter;
         [SerializeField] private TextMeshProUGUI text;
 
         protected override void Initialize() {

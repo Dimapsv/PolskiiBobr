@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
+  <Summary numSequencePoints="85" visitedSequencePoints="44" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="51.76" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="4" numClasses="5" visitedMethods="8" numMethods="10" />
+  <Modules>
+    <Module>
+      <Summary numSequencePoints="48" visitedSequencePoints="42" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="87.50" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="3" numClasses="3" visitedMethods="7" numMethods="7" />
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>Assembly-CSharp</ModuleName>
+      <Files>
+        <File uid="22" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Arcade Bike Physics/Scripts/ArcadeBikeController.cs" />
+        <File uid="23" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Arcade Bike Physics/Scripts/BikerAnimation.cs" />
+        <File uid="24" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Arcade Bike Physics/Scripts/SkidMarks.cs" />
+        <File uid="25" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/InputSettings/ThirpdPesonActionsAsset.cs" />
+        <File uid="26" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/MouseLook.cs" />
+        <File uid="27" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/PlayerMovement.cs" />
+        <File uid="28" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Abilites/DashAbility.cs" />
+        <File uid="29" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/AI/AI_PATROL.cs" />
+        <File uid="30" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/AI/BULL.cs" />
+        <File uid="31" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/AI/FieldOfView.cs" />
+        <File uid="32" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/AI/FieldOfViewEditor1.cs" />
+        <File uid="33" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/BOBR/Dashing.cs" />
+        <File uid="34" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/BOBR/Slam.cs" />
+        <File uid="35" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/CAR/CarEnterExitSystem.cs" />
+        <File uid="36" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/DamageScript.cs" />
+        <File uid="37" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/FastTrevel.cs" />
+        <File uid="38" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/GameManager.cs" />
+        <File uid="39" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/GarageSergei.cs" />
+        <File uid="40" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Inventory/Item.cs" />
+        <File uid="41" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/LillyRose.cs" />
+        <File uid="42" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/MainMenu.cs" />
+        <File uid="43" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Mommy.cs" />
+        <File uid="44" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/NPC/DialogueManager.cs" />
+        <File uid="45" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/NPC/NPC.cs" />
+        <File uid="46" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/NPC/QUESTING/QuestCheker.cs" />
+        <File uid="47" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/NPC/QUESTING/QuestManager.cs" />
+        <File uid="48" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/PlayerManager.cs" />
+        <File uid="49" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Pushing.cs" />
+        <File uid="50" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/PushingUpgrade.cs" />
+        <File uid="51" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/SoundRandomizer.cs" />
+        <File uid="52" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Spawner.cs" />
+        <File uid="53" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Spin.cs" />
+        <File uid="54" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/ThirdPersonController.cs" />
+        <File uid="55" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/MessageManager.cs" />
+        <File uid="56" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/UIManager.cs" />
+        <File uid="57" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Visable.cs" />
+        <File uid="58" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Water.cs" />
+        <File uid="59" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/WaterDeath.cs" />
+        <File uid="60" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Util/Cardinal_ScriptMesh.cs" />
+        <File uid="61" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Util/CardinalDirection.cs" />
+        <File uid="62" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/World/North.cs" />
+        <File uid="63" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/World/Trackable.cs" />
+        <File uid="64" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/World/Tracker.cs" />
+        <File uid="65" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/Util/BillboardLabel.cs" />
+        <File uid="66" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/ACompass.cs" />
+        <File uid="67" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/ACompassElement.cs" />
+        <File uid="68" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/ADirectionIcon.cs" />
+        <File uid="69" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/ATrackableIcon.cs" />
+        <File uid="70" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/DirectionIcon.cs" />
+        <File uid="71" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/ImageIcon.cs" />
+        <File uid="72" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/LetterIcon.cs" />
+        <File uid="73" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/UI/SimpleUICompass.cs" />
+        <File uid="74" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Musor/Scripts/SimpleCameraController.cs" />
+        <File uid="75" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/DavidJalbert/LowPolyPeople/Example/Scripts/AnimationController.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="12" visitedSequencePoints="10" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="83.33" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>ArcadeBikeController</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="83.33" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="12" visitedSequencePoints="10" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="83.33" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Void ArcadeBikeController::OnDrawGizmos()</Name>
+              <FileRef uid="22" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="1336" ordinal="0" offset="0" sl="204" sc="9" el="204" ec="9" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1337" ordinal="0" offset="22" sl="205" sc="9" el="205" ec="9" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1338" ordinal="0" offset="28" sl="206" sc="9" el="206" ec="9" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1339" ordinal="0" offset="38" sl="208" sc="13" el="208" ec="13" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1340" ordinal="0" offset="48" sl="209" sc="13" el="209" ec="13" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1341" ordinal="0" offset="128" sl="210" sc="13" el="210" ec="13" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="0" uspid="1342" ordinal="0" offset="141" sl="212" sc="17" el="212" ec="17" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="0" uspid="1343" ordinal="0" offset="151" sl="213" sc="17" el="213" ec="17" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1344" ordinal="0" offset="178" sl="215" sc="13" el="215" ec="13" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1345" ordinal="0" offset="191" sl="217" sc="17" el="217" ec="17" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1346" ordinal="0" offset="201" sl="218" sc="17" el="218" ec="17" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="12" uspid="1347" ordinal="0" offset="236" sl="223" sc="5" el="223" ec="5" bec="0" bev="0" fileid="22" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="31" visitedSequencePoints="28" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="90.32" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="5" numMethods="5" />
+          <FullName>RectangleTrainer.Mesh2Script.ScriptMesh.Cardinal_ScriptMesh</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663534</MetadataToken>
+              <Name>static UnityEngine.Mesh RectangleTrainer.Mesh2Script.ScriptMesh.Cardinal_ScriptMesh::get_Mesh()</Name>
+              <FileRef uid="60" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="2267" ordinal="0" offset="0" sl="175" sc="5" el="175" ec="5" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2268" ordinal="0" offset="13" sl="176" sc="6" el="176" ec="6" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="12" uspid="2269" ordinal="0" offset="23" sl="178" sc="5" el="178" ec="5" bec="0" bev="0" fileid="60" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663535</MetadataToken>
+              <Name>static UnityEngine.Vector3[] RectangleTrainer.Mesh2Script.ScriptMesh.Cardinal_ScriptMesh::FloatListToVector3(System.Single[]&amp;)</Name>
+              <FileRef uid="60" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="2270" ordinal="0" offset="0" sl="183" sc="4" el="183" ec="4" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="2" uspid="2271" ordinal="0" offset="12" sl="184" sc="17" el="184" ec="17" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="352" uspid="2272" ordinal="0" offset="16" sl="185" sc="17" el="185" ec="17" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="352" uspid="2273" ordinal="0" offset="50" sl="184" sc="52" el="184" ec="52" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="354" uspid="2274" ordinal="0" offset="54" sl="184" sc="28" el="184" ec="28" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="2" uspid="2275" ordinal="0" offset="60" sl="188" sc="13" el="188" ec="13" bec="0" bev="0" fileid="60" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="66.67" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="66.67" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663536</MetadataToken>
+              <Name>static UnityEngine.Vector2[] RectangleTrainer.Mesh2Script.ScriptMesh.Cardinal_ScriptMesh::FloatListToVector2(System.Single[]&amp;)</Name>
+              <FileRef uid="60" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="2276" ordinal="0" offset="0" sl="192" sc="4" el="192" ec="4" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2277" ordinal="0" offset="12" sl="193" sc="17" el="193" ec="17" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="0" uspid="2278" ordinal="0" offset="16" sl="194" sc="17" el="194" ec="17" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="0" uspid="2279" ordinal="0" offset="42" sl="193" sc="52" el="193" ec="52" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2280" ordinal="0" offset="46" sl="193" sc="28" el="193" ec="28" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2281" ordinal="0" offset="52" sl="197" sc="13" el="197" ec="13" bec="0" bev="0" fileid="60" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="91.67" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="12" visitedSequencePoints="11" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="91.67" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663537</MetadataToken>
+              <Name>static UnityEngine.Mesh RectangleTrainer.Mesh2Script.ScriptMesh.Cardinal_ScriptMesh::Make()</Name>
+              <FileRef uid="60" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="2282" ordinal="0" offset="0" sl="202" sc="4" el="202" ec="4" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2283" ordinal="0" offset="11" sl="203" sc="4" el="203" ec="4" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2284" ordinal="0" offset="22" sl="204" sc="13" el="204" ec="13" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2285" ordinal="0" offset="33" sl="206" sc="4" el="206" ec="4" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2286" ordinal="0" offset="39" sl="207" sc="4" el="207" ec="4" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2287" ordinal="0" offset="46" sl="208" sc="4" el="208" ec="4" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2288" ordinal="0" offset="57" sl="209" sc="4" el="209" ec="4" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2289" ordinal="0" offset="64" sl="210" sc="13" el="210" ec="13" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2290" ordinal="0" offset="71" sl="212" sc="13" el="212" ec="13" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="0" uspid="2291" ordinal="0" offset="80" sl="213" sc="17" el="213" ec="17" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2292" ordinal="0" offset="86" sl="216" sc="13" el="216" ec="13" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2293" ordinal="0" offset="92" sl="218" sc="4" el="218" ec="4" bec="0" bev="0" fileid="60" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="true" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663538</MetadataToken>
+              <Name>static RectangleTrainer.Mesh2Script.ScriptMesh.Cardinal_ScriptMesh::Cardinal_ScriptMesh()</Name>
+              <FileRef uid="60" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="2294" ordinal="0" offset="0" sl="14" sc="9" el="14" ec="9" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2295" ordinal="0" offset="26" sl="77" sc="3" el="77" ec="3" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2296" ordinal="0" offset="52" sl="103" sc="9" el="103" ec="9" bec="0" bev="0" fileid="60" />
+                <SequencePoint vc="1" uspid="2297" ordinal="0" offset="78" sl="166" sc="9" el="166" ec="9" bec="0" bev="0" fileid="60" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="80.00" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>RectangleTrainer.Compass.World.North</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="80.00" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="80.00" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663544</MetadataToken>
+              <Name>System.Void RectangleTrainer.Compass.World.North::OnDrawGizmos()</Name>
+              <FileRef uid="62" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="2318" ordinal="0" offset="0" sl="59" sc="13" el="59" ec="13" bec="0" bev="0" fileid="62" />
+                <SequencePoint vc="0" uspid="2319" ordinal="0" offset="8" sl="60" sc="17" el="60" ec="17" bec="0" bev="0" fileid="62" />
+                <SequencePoint vc="12" uspid="2320" ordinal="0" offset="9" sl="62" sc="13" el="62" ec="13" bec="0" bev="0" fileid="62" />
+                <SequencePoint vc="12" uspid="2321" ordinal="0" offset="19" sl="63" sc="13" el="63" ec="13" bec="0" bev="0" fileid="62" />
+                <SequencePoint vc="12" uspid="2322" ordinal="0" offset="55" sl="64" sc="9" el="64" ec="9" bec="0" bev="0" fileid="62" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module>
+      <Summary numSequencePoints="7" visitedSequencePoints="2" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="28.57" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>Assembly-CSharp-Editor</ModuleName>
+      <Files>
+        <File uid="76" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Arcade Bike Physics/Editor/BikerAnimationCreator.cs" />
+        <File uid="77" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Arcade Bike Physics/Editor/SimpleBikeCreator.cs" />
+        <File uid="78" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Musor/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
+        <File uid="79" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Scripts/World/Editor/TrackableEditor.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="7" visitedSequencePoints="2" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="28.57" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>ReadmeEditor</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="28.57" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="7" visitedSequencePoints="2" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="28.57" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663307</MetadataToken>
+              <Name>static System.Void ReadmeEditor::SelectReadmeAutomatically()</Name>
+              <FileRef uid="78" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="2817" ordinal="0" offset="0" sl="24" sc="9" el="24" ec="9" bec="0" bev="0" fileid="78" />
+                <SequencePoint vc="0" uspid="2818" ordinal="0" offset="13" sl="26" sc="13" el="26" ec="13" bec="0" bev="0" fileid="78" />
+                <SequencePoint vc="0" uspid="2819" ordinal="0" offset="19" sl="27" sc="13" el="27" ec="13" bec="0" bev="0" fileid="78" />
+                <SequencePoint vc="0" uspid="2820" ordinal="0" offset="30" sl="29" sc="13" el="29" ec="13" bec="0" bev="0" fileid="78" />
+                <SequencePoint vc="0" uspid="2821" ordinal="0" offset="46" sl="31" sc="17" el="31" ec="17" bec="0" bev="0" fileid="78" />
+                <SequencePoint vc="0" uspid="2822" ordinal="0" offset="51" sl="32" sc="17" el="32" ec="17" bec="0" bev="0" fileid="78" />
+                <SequencePoint vc="1" uspid="2823" ordinal="0" offset="58" sl="35" sc="5" el="35" ec="5" bec="0" bev="0" fileid="78" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module>
+      <Summary numSequencePoints="30" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" />
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>sc.stylizedgrass.runtime</ModuleName>
+      <Files>
+        <File uid="92" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Models/Stylized Grass Shader/Runtime/ColorMapRendering.cs" />
+        <File uid="93" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Models/Stylized Grass Shader/Runtime/GrassBender.cs" />
+        <File uid="94" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Models/Stylized Grass Shader/Runtime/GrassColorMap.cs" />
+        <File uid="95" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Models/Stylized Grass Shader/Runtime/GrassColorMapRenderer.cs" />
+        <File uid="96" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Models/Stylized Grass Shader/Runtime/GrassMaskingSphere.cs" />
+        <File uid="97" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Models/Stylized Grass Shader/Runtime/GrassRenderFeature.cs" />
+        <File uid="98" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Models/Stylized Grass Shader/Runtime/PipelineUtilities.cs" />
+        <File uid="99" fullPath="D:/UnityProjects/GitHub/PolskiiBobr/Assets/Models/Stylized Grass Shader/Runtime/StylizedGrassRenderer.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="30" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" />
+          <FullName>StylizedGrass.PipelineUtilities</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="11" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663369</MetadataToken>
+              <Name>static System.Boolean StylizedGrass.PipelineUtilities::RenderFeatureAdded[T](System.Boolean)</Name>
+              <FileRef uid="98" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="4656" ordinal="0" offset="0" sl="167" sc="0" el="167" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4657" ordinal="0" offset="6" sl="168" sc="0" el="168" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4658" ordinal="0" offset="8" sl="170" sc="0" el="170" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4659" ordinal="0" offset="22" sl="170" sc="0" el="170" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4660" ordinal="0" offset="30" sl="172" sc="0" el="172" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4661" ordinal="0" offset="39" sl="174" sc="0" el="174" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4662" ordinal="0" offset="62" sl="174" sc="0" el="174" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4663" ordinal="0" offset="64" sl="170" sc="0" el="170" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4664" ordinal="0" offset="89" sl="177" sc="0" el="177" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4665" ordinal="0" offset="97" sl="177" sc="0" el="177" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4666" ordinal="0" offset="104" sl="179" sc="0" el="179" ec="0" bec="0" bev="0" fileid="98" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="19" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663370</MetadataToken>
+              <Name>static System.Void StylizedGrass.PipelineUtilities::AddRenderFeature[T](UnityEngine.Rendering.Universal.ScriptableRendererData, System.Boolean)</Name>
+              <FileRef uid="98" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="4667" ordinal="0" offset="0" sl="189" sc="0" el="189" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4668" ordinal="0" offset="9" sl="189" sc="0" el="189" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4669" ordinal="0" offset="16" sl="191" sc="0" el="191" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4670" ordinal="0" offset="42" sl="192" sc="0" el="192" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4671" ordinal="0" offset="63" sl="196" sc="0" el="196" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4672" ordinal="0" offset="66" sl="198" sc="0" el="198" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4673" ordinal="0" offset="73" sl="199" sc="0" el="199" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4674" ordinal="0" offset="84" sl="204" sc="0" el="204" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4675" ordinal="0" offset="106" sl="205" sc="0" el="205" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4676" ordinal="0" offset="119" sl="208" sc="0" el="208" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4677" ordinal="0" offset="126" sl="209" sc="0" el="209" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4678" ordinal="0" offset="133" sl="211" sc="0" el="211" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4679" ordinal="0" offset="136" sl="214" sc="0" el="214" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4680" ordinal="0" offset="158" sl="215" sc="0" el="215" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4681" ordinal="0" offset="166" sl="218" sc="0" el="218" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4682" ordinal="0" offset="172" sl="219" sc="0" el="219" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4683" ordinal="0" offset="177" sl="223" sc="0" el="223" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4684" ordinal="0" offset="180" sl="223" sc="0" el="223" ec="0" bec="0" bev="0" fileid="98" />
+                <SequencePoint vc="0" uspid="4685" ordinal="0" offset="238" sl="224" sc="0" el="224" ec="0" bec="0" bev="0" fileid="98" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>

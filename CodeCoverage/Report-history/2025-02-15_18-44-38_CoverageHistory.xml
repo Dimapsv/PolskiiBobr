@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-02-15_18-44-38" tag="">
+  <assembly name="Assembly-CSharp">
+    <class name="AI_PATROL" coveredlines="33" coverablelines="50" totallines="86" coveredbranches="0" totalbranches="0" />
+    <class name="ArcadeBikeController" coveredlines="29" coverablelines="125" totallines="225" coveredbranches="0" totalbranches="0" />
+    <class name="BikerAnimation" coveredlines="0" coverablelines="93" totallines="162" coveredbranches="0" totalbranches="0" />
+    <class name="BULL" coveredlines="7" coverablelines="27" totallines="54" coveredbranches="0" totalbranches="0" />
+    <class name="CarEnterExitSystem" coveredlines="23" coverablelines="68" totallines="137" coveredbranches="0" totalbranches="0" />
+    <class name="DamageScript" coveredlines="3" coverablelines="22" totallines="40" coveredbranches="0" totalbranches="0" />
+    <class name="DashAbility" coveredlines="0" coverablelines="4" totallines="18" coveredbranches="0" totalbranches="0" />
+    <class name="Dashing" coveredlines="0" coverablelines="7" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="DavidJalbert.LowPolyPeople.AnimationController" coveredlines="0" coverablelines="37" totallines="65" coveredbranches="0" totalbranches="0" />
+    <class name="DialogueManager" coveredlines="6" coverablelines="35" totallines="73" coveredbranches="0" totalbranches="0" />
+    <class name="FastTrevel" coveredlines="3" coverablelines="18" totallines="34" coveredbranches="0" totalbranches="0" />
+    <class name="FieldOfView" coveredlines="34" coverablelines="53" totallines="98" coveredbranches="0" totalbranches="0" />
+    <class name="FieldOfViewEditor" coveredlines="0" coverablelines="19" totallines="35" coveredbranches="0" totalbranches="0" />
+    <class name="GameManager" coveredlines="21" coverablelines="58" totallines="144" coveredbranches="0" totalbranches="0" />
+    <class name="GarageSergei" coveredlines="0" coverablelines="7" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Item" coveredlines="3" coverablelines="8" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="LillyRose" coveredlines="7" coverablelines="36" totallines="66" coveredbranches="0" totalbranches="0" />
+    <class name="MainMenu" coveredlines="0" coverablelines="3" totallines="12" coveredbranches="0" totalbranches="0" />
+    <class name="MessageManager" coveredlines="10" coverablelines="26" totallines="56" coveredbranches="0" totalbranches="0" />
+    <class name="Mommy" coveredlines="3" coverablelines="12" totallines="25" coveredbranches="0" totalbranches="0" />
+    <class name="MouseLook" coveredlines="0" coverablelines="13" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="NPC" coveredlines="4" coverablelines="4" totallines="26" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerManager" coveredlines="24" coverablelines="149" totallines="260" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerMovement" coveredlines="0" coverablelines="28" totallines="53" coveredbranches="0" totalbranches="0" />
+    <class name="Pushing" coveredlines="4" coverablelines="20" totallines="35" coveredbranches="0" totalbranches="0" />
+    <class name="PushingUpgrade" coveredlines="0" coverablelines="7" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="QuestCheker" coveredlines="0" coverablelines="4" totallines="18" coveredbranches="0" totalbranches="0" />
+    <class name="QuestManager" coveredlines="51" coverablelines="180" totallines="302" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.CardinalDirections" coveredlines="1" coverablelines="1" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.UI.ACompass" coveredlines="60" coverablelines="83" totallines="132" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.UI.ACompassElement" coveredlines="3" coverablelines="3" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.UI.ADirectionIcon" coveredlines="1" coverablelines="1" totallines="9" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.UI.ATrackableIcon" coveredlines="4" coverablelines="6" totallines="20" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.UI.DirectionIcon" coveredlines="17" coverablelines="17" totallines="34" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.UI.ImageIcon" coveredlines="18" coverablelines="22" totallines="42" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.UI.LetterIcon" coveredlines="4" coverablelines="8" totallines="21" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.UI.SimpleUICompass" coveredlines="14" coverablelines="14" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.Util.BillboardLabel" coveredlines="7" coverablelines="7" totallines="21" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.World.North" coveredlines="19" coverablelines="28" totallines="66" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.World.Trackable" coveredlines="15" coverablelines="18" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.World.Tracker" coveredlines="33" coverablelines="41" totallines="67" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Mesh2Script.ScriptMesh.Cardinal_ScriptMesh" coveredlines="34" coverablelines="38" totallines="221" coveredbranches="0" totalbranches="0" />
+    <class name="SkidMarks" coveredlines="26" coverablelines="32" totallines="57" coveredbranches="0" totalbranches="0" />
+    <class name="Slam" coveredlines="9" coverablelines="45" totallines="88" coveredbranches="0" totalbranches="0" />
+    <class name="SoundRandomizer" coveredlines="9" coverablelines="12" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="Spawner" coveredlines="4" coverablelines="4" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="Spin" coveredlines="3" coverablelines="3" totallines="12" coveredbranches="0" totalbranches="0" />
+    <class name="ThirdPersonController" coveredlines="107" coverablelines="247" totallines="433" coveredbranches="0" totalbranches="0" />
+    <class name="ThirpdPesonActionsAsset" coveredlines="17" coverablelines="84" totallines="271" coveredbranches="0" totalbranches="0" />
+    <class name="UIManager" coveredlines="37" coverablelines="93" totallines="200" coveredbranches="0" totalbranches="0" />
+    <class name="UnityTemplateProjects.SimpleCameraController" coveredlines="0" coverablelines="126" totallines="301" coveredbranches="0" totalbranches="0" />
+    <class name="Visable" coveredlines="0" coverablelines="7" totallines="16" coveredbranches="0" totalbranches="0" />
+    <class name="Water" coveredlines="0" coverablelines="6" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="WaterDeath" coveredlines="0" coverablelines="6" totallines="15" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Assembly-CSharp-Editor">
+    <class name="ArcadeBikeCreator" coveredlines="0" coverablelines="82" totallines="132" coveredbranches="0" totalbranches="0" />
+    <class name="BikerAnimationCreator" coveredlines="0" coverablelines="28" totallines="60" coveredbranches="0" totalbranches="0" />
+    <class name="ReadmeEditor" coveredlines="3" coverablelines="98" totallines="156" coveredbranches="0" totalbranches="0" />
+    <class name="RectangleTrainer.Compass.Inspector.TrackableEditor" coveredlines="0" coverablelines="22" totallines="41" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Assembly-CSharp-firstpass">
+    <class name="DG.Tweening.DOTweenCYInstruction" coveredlines="0" coverablelines="44" totallines="389" coveredbranches="0" totalbranches="0" />
+    <class name="DG.Tweening.DOTweenModuleAudio" coveredlines="0" coverablelines="56" totallines="198" coveredbranches="0" totalbranches="0" />
+    <class name="DG.Tweening.DOTweenModulePhysics" coveredlines="0" coverablelines="83" totallines="216" coveredbranches="0" totalbranches="0" />
+    <class name="DG.Tweening.DOTweenModulePhysics2D" coveredlines="0" coverablelines="76" totallines="193" coveredbranches="0" totalbranches="0" />
+    <class name="DG.Tweening.DOTweenModuleSprite" coveredlines="0" coverablelines="34" totallines="93" coveredbranches="0" totalbranches="0" />
+    <class name="DG.Tweening.DOTweenModuleUI" coveredlines="0" coverablelines="268" totallines="662" coveredbranches="0" totalbranches="0" />
+    <class name="DG.Tweening.DOTweenModuleUnityVersion" coveredlines="0" coverablelines="118" totallines="389" coveredbranches="0" totalbranches="0" />
+    <class name="DG.Tweening.DOTweenModuleUtils" coveredlines="0" coverablelines="46" totallines="167" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Characters.FirstPerson.FirstPersonController" coveredlines="0" coverablelines="137" totallines="260" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Characters.FirstPerson.HeadBob" coveredlines="0" coverablelines="24" totallines="55" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Characters.FirstPerson.MouseLook" coveredlines="0" coverablelines="72" totallines="115" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController" coveredlines="0" coverablelines="139" totallines="265" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Characters.ThirdPerson.AICharacterControl" coveredlines="0" coverablelines="18" totallines="43" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter" coveredlines="0" coverablelines="130" totallines="225" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl" coveredlines="0" coverablelines="32" totallines="75" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager" coveredlines="0" coverablelines="133" totallines="318" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.CrossPlatformInput.PlatformSpecific.MobileInput" coveredlines="0" coverablelines="79" totallines="133" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.CrossPlatformInput.PlatformSpecific.StandaloneInput" coveredlines="0" coverablelines="27" totallines="79" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.CrossPlatformInput.VirtualInput" coveredlines="0" coverablelines="60" totallines="134" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Utility.CurveControlledBob" coveredlines="0" coverablelines="24" totallines="54" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Utility.FOVKick" coveredlines="0" coverablelines="38" totallines="73" coveredbranches="0" totalbranches="0" />
+    <class name="UnityStandardAssets.Utility.LerpControlledBob" coveredlines="0" coverablelines="21" totallines="45" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="sc.stylizedgrass.demo.runtime">
+    <class name="StylizedGrassDemo.MoveInCircle" coveredlines="0" coverablelines="21" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrassDemo.OrbitCamera" coveredlines="0" coverablelines="43" totallines="87" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrassDemo.PlayerController" coveredlines="0" coverablelines="32" totallines="53" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="sc.stylizedgrass.editor">
+    <class name="StylizedGrass.AssetInfo" coveredlines="0" coverablelines="65" totallines="254" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.ColorMapInspector" coveredlines="0" coverablelines="52" totallines="90" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.GrassBenderInspector" coveredlines="0" coverablelines="100" totallines="182" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.GrassColorMapRendererInspector" coveredlines="0" coverablelines="364" totallines="562" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.KeywordStripper" coveredlines="0" coverablelines="59" totallines="418" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.MaterialUI" coveredlines="0" coverablelines="356" totallines="694" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.MinMaxSlider" coveredlines="0" coverablelines="32" totallines="694" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.ShaderConfigurator" coveredlines="0" coverablelines="116" totallines="418" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.StylizedGrassEditor" coveredlines="0" coverablelines="29" totallines="61" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.StylizedGrassGUI" coveredlines="0" coverablelines="147" totallines="354" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.StylizedGrassRendererInspector" coveredlines="0" coverablelines="94" totallines="159" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="sc.stylizedgrass.runtime">
+    <class name="StylizedGrass.ColorMapRendering" coveredlines="0" coverablelines="405" totallines="743" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.GrassBender" coveredlines="0" coverablelines="150" totallines="302" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.GrassColorMap" coveredlines="0" coverablelines="30" totallines="70" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.GrassColorMapRenderer" coveredlines="0" coverablelines="65" totallines="171" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.GrassMaskingSphere" coveredlines="0" coverablelines="18" totallines="45" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.GrassRenderFeature" coveredlines="0" coverablelines="160" totallines="374" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.PipelineUtilities" coveredlines="0" coverablelines="117" totallines="255" coveredbranches="0" totalbranches="0" />
+    <class name="StylizedGrass.StylizedGrassRenderer" coveredlines="0" coverablelines="97" totallines="201" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

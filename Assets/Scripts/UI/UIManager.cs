@@ -15,7 +15,8 @@ public class UIManager : MonoBehaviour
     public static UnityEvent<int> OnWriteMessage = new UnityEvent<int>();
     public int idOfMessageL;
 
-    public Image bloodOverlay; // Try to use DoTweeen for few second looking this
+    public GameObject bloodOverlay; // Try to use DoTweeen for few second looking this
+    public TMP_Text damageText;
 
     //inventory
     public GameObject inventoryPanel;
@@ -42,8 +43,9 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        bloodOverlay.enabled = false;
+        
         fastTrevelPanel.SetActive(false);
+        HideDamageOverLay();
 
 
     }
@@ -56,11 +58,12 @@ public class UIManager : MonoBehaviour
         FastTrevel.OnFastTrevelStaying.AddListener(UIFastTrevel);
 
         PlayerManager.OnHealthValueChanged.AddListener(UIHealthUpdate);
-        PlayerManager.OnDamageTaked.AddListener(UIDamageTaking);
+        
 
         PlayerManager.OnBrevnoValueChanged.AddListener(UIBrevnoUpdate);
 
-        PlayerManager.OnKeyOfLesopilkaHasChanged.AddListener(UIKeyOfLesopilkaUpdate);
+
+        DamageScript.OnDealingDamage.AddListener(ShowDamageOverlay);
 
         PlayerManager.OnNoteTaked.AddListener(UINoteUpdate);
 
@@ -73,11 +76,11 @@ public class UIManager : MonoBehaviour
         QuestManager.OnQuestTaked.RemoveListener(UIQuestAdd);
 
         PlayerManager.OnHealthValueChanged.RemoveListener(UIHealthUpdate);
-        PlayerManager.OnDamageTaked.RemoveListener(UIDamageTaking);
+
+        DamageScript.OnDealingDamage.RemoveListener(ShowDamageOverlay);
 
         PlayerManager.OnBrevnoValueChanged.RemoveListener(UIBrevnoUpdate);
 
-        PlayerManager.OnKeyOfLesopilkaHasChanged.RemoveListener(UIKeyOfLesopilkaUpdate);
 
         PlayerManager.OnNoteTaked.RemoveListener(UINoteUpdate);
 
@@ -90,6 +93,13 @@ public class UIManager : MonoBehaviour
 
         inventoryEmptyImages[idOfImageInventory].SetActive(false);
         inventoryImages[idOfImageInventory].SetActive(true);
+
+        if (idOfImageInventory == 0)
+        {
+            idOfMessageL = 0;
+            ShowMessage(); // id = 0 - lesopilka opened
+        }
+
     }
 
     public void UIQuestAdd(int idOfQuest)
@@ -102,10 +112,7 @@ public class UIManager : MonoBehaviour
         playerHealthText.text = healthValue.ToString();
     }
         
-    public void UIDamageTaking()
-    {
-        ShowBloodImageForSeconds(2f);
-    }
+    
 
     public void UIBrevnoUpdate(int brevnoValue)
     {
@@ -118,8 +125,6 @@ public class UIManager : MonoBehaviour
         if (isHasKey)
         {
             SpawnChild(inventoryPanel.transform, keyOfLesopilkaImage);
-            idOfMessageL = 0;
-            ShowMessage(); // id = 0 - lesopilka opened
         }
             
     }
@@ -149,20 +154,7 @@ public class UIManager : MonoBehaviour
     }
 
 
-    void ShowBloodImageForSeconds(float seconds)
-    {
-        // Показать изображение
-        bloodOverlay.enabled = true;
-
-        // Скрыть изображение через заданное время
-        Invoke("HideBloodImage", seconds);
-    }
-
-    void HideBloodImage()
-    {
-        // Скрыть изображение
-        bloodOverlay.enabled = false;
-    }
+    
 
     public void UIFastTrevel(bool isStaying)
     {
@@ -189,5 +181,20 @@ public class UIManager : MonoBehaviour
             
             
         }
+    }
+
+
+    private void ShowDamageOverlay(int damage)
+    {
+        damageText.text = "-" + damage.ToString();
+        damageText.enabled = true;
+        bloodOverlay.SetActive(true);
+        Invoke("HideDamageOverLay",1.0f);
+    }
+
+    private void HideDamageOverLay()
+    {
+        bloodOverlay.SetActive(false);
+        damageText.enabled = false;
     }
 }
