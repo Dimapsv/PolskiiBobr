@@ -176,10 +176,7 @@ public class UIManager : MonoBehaviour
             GameObject spawnedChild = Instantiate(childObjectPrefab.gameObject, parent.position, parent.rotation);
             spawnedChild.transform.SetParent(parent);
             spawnedChild.GetComponent<RectTransform>().localScale = new Vector3(1, 0.5f, 1);
-            
-            
-            
-            
+                        
         }
     }
 

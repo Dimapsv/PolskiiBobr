@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using Unity.VisualScripting;
-using UnityEditor.AnimatedValues;
+
 
 public class ThirdPersonController : MonoBehaviour
 {
@@ -71,6 +71,8 @@ public class ThirdPersonController : MonoBehaviour
     //guideLabels
     public GameObject pressEToTalkLabel;
 
+    // helpControllPanel
+    public GameObject helpControllPanel;
     
 
     private void Awake()
@@ -85,6 +87,7 @@ public class ThirdPersonController : MonoBehaviour
         bobrAxe.SetActive(false);
         pressEToTalkLabel.SetActive(false);
         movementForce = movementForceWalk;
+        helpControllPanel.SetActive(false);
     }
 
     private void OnEnable()
@@ -170,9 +173,17 @@ public class ThirdPersonController : MonoBehaviour
             Interact();
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            helpControllPanel.SetActive(true);
+        }
 
-        
+        if (Input.GetKeyUp(KeyCode.H))
+        {
+            helpControllPanel.SetActive(false);
+        }
+
+
         // Update dash timer
         if (isDashing)
         {

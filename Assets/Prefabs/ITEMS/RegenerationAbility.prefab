@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RegenerationAbility
       objectReference: {fileID: 0}
+    - target: {fileID: 9053688827792884772, guid: c619289b6a5552340bd9560b960e51af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 95c2411262724df46aaddc63b977cf86, type: 2}
     - target: {fileID: 9053688827792884774, guid: c619289b6a5552340bd9560b960e51af, type: 3}
       propertyPath: m_RootOrder
       value: 0

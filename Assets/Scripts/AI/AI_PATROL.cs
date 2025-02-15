@@ -68,7 +68,7 @@ public class AI_PATROL : MonoBehaviour
         }
         if (AI_Enemy == AI_State.Chase)
         {
-            AI_Agent.speed = 16;
+            AI_Agent.speed = 14;
             //gameObject.GetComponent<Animator>().SetBool("Move", true);
 
             if (gameObject.CompareTag("ForbiddenBoy"))

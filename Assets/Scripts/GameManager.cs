@@ -122,13 +122,13 @@ public class GameManager : MonoBehaviour
     public void RestartButton()
     {
         ResumeGame();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void MainMenuButton()
     {
         ResumeGame();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     
