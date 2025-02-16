@@ -17,6 +17,7 @@ public class AI_PATROL : MonoBehaviour
 
     public Animator anim;
 
+    
     void Start()
     {
         AI_Agent = gameObject.GetComponent<NavMeshAgent>();

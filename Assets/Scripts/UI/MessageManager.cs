@@ -18,11 +18,13 @@ public class MessageManager : MonoBehaviour
     private void OnEnable()
     {
         UIManager.OnWriteMessage.AddListener(WriteMessage);
+        MessageTrigger.OnCallMessage.AddListener(WriteMessage);
     }
 
     private void OnDisable()
     {
         UIManager.OnWriteMessage.RemoveListener(WriteMessage);
+        MessageTrigger.OnCallMessage.AddListener(WriteMessage);
     }
 
     private void WriteMessage(int id)

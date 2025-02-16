@@ -73,7 +73,10 @@ public class ThirdPersonController : MonoBehaviour
 
     // helpControllPanel
     public GameObject helpControllPanel;
-    
+
+    //drag
+    public int startDrag;
+    public int startMass;
 
     private void Awake()
     {
@@ -149,6 +152,8 @@ public class ThirdPersonController : MonoBehaviour
         //    StartCoroutine(Dash());
         //}
 
+        
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             movementForce = movementForceRun;
@@ -182,6 +187,8 @@ public class ThirdPersonController : MonoBehaviour
         {
             helpControllPanel.SetActive(false);
         }
+
+        
 
 
         // Update dash timer
@@ -340,6 +347,7 @@ public class ThirdPersonController : MonoBehaviour
         if (isGrounded())
         {
             forceDirection += Vector3.up * jumpForce;
+            
         }
     }
 
@@ -347,48 +355,50 @@ public class ThirdPersonController : MonoBehaviour
     {
         Ray ray = new Ray(this.transform.position + Vector3.up * 0.25f, Vector3.down);
         if (Physics.Raycast(ray, out RaycastHit hit, 1f))
+        {
+            
             return true;
+        }
         else
             return false;
     }
 
     
+    //IEnumerator Dash()
+    //{
+    //    isDashing = true;
 
-    IEnumerator Dash()
-    {
-        isDashing = true;
+    //    // Store initial position
+    //    Vector3 startPosition = transform.position;
 
-        // Store initial position
-        Vector3 startPosition = transform.position;
+    //    // Calculate dash end position
+    //    Vector3 endPosition = startPosition + transform.forward * dashDistance;
 
-        // Calculate dash end position
-        Vector3 endPosition = startPosition + transform.forward * dashDistance;
-
-        // Perform the dash
-        while (isDashing)
-        {
+    //    // Perform the dash
+    //    while (isDashing)
+    //    {
             
-            Vector3 targetPosition = Vector3.Lerp(startPosition, endPosition, dashTimer/dashTime);
+    //        Vector3 targetPosition = Vector3.Lerp(startPosition, endPosition, dashTimer/dashTime);
 
-            // Check for collisions
-            Vector3 direction = (targetPosition - rb.position).normalized;
-            RaycastHit hit;
-            if (Physics.Raycast(rb.position, direction, out hit, dashDistance))
-            {
-                // If there is a collision, stop the dash
-                rb.MovePosition(hit.point - direction * 0.2f); // Move slightly back to avoid sticking
-                break;
-            }
-            else
-            {
-                rb.MovePosition(targetPosition);
-            }
+    //        // Check for collisions
+    //        Vector3 direction = (targetPosition - rb.position).normalized;
+    //        RaycastHit hit;
+    //        if (Physics.Raycast(rb.position, direction, out hit, dashDistance))
+    //        {
+    //            // If there is a collision, stop the dash
+    //            rb.MovePosition(hit.point - direction * 0.2f); // Move slightly back to avoid sticking
+    //            break;
+    //        }
+    //        else
+    //        {
+    //            rb.MovePosition(targetPosition);
+    //        }
 
-            yield return null;
-        }
+    //        yield return null;
+    //    }
 
-        isDashing = false;
-    }
+    //    isDashing = false;
+    //}
 
 
     private void OnTriggerStay(Collider other)

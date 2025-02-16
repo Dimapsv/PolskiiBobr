@@ -18,6 +18,8 @@ public class FieldOfView : MonoBehaviour
 
     public bool isForbiddenBoy;
 
+    public GameObject viweIndicatorUI;
+
     public AI_PATROL ai;
 
     private void OnEnable()
@@ -32,6 +34,7 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
+        viweIndicatorUI.SetActive(false);
         playerRef = GameObject.FindGameObjectWithTag("Player");
         ai = gameObject.GetComponent<AI_PATROL>();
         StartCoroutine(FOVRoutine());
@@ -52,6 +55,7 @@ public class FieldOfView : MonoBehaviour
         if (canSeePlayer == true)
         {
             ai.AI_Enemy = AI_PATROL.AI_State.Chase;
+            
         }
         else if (canSeePlayer == false && isForbiddenBoy)
         {
@@ -79,16 +83,31 @@ public class FieldOfView : MonoBehaviour
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, ObstacleMask) && !bobrIsHidden)
+                {
+                    viweIndicatorUI.SetActive(true);
                     canSeePlayer = true;
+                }
 
                 else
+                {
                     canSeePlayer = false;
+                    viweIndicatorUI.SetActive(false);
+                }
+
             }
             else
+            {
                 canSeePlayer = false;
+                viweIndicatorUI.SetActive(false);
+            }
+
         }
         else if (canSeePlayer)
+        {
             canSeePlayer = false;
+            viweIndicatorUI.SetActive(false);
+        }
+            
     }
 
     public void CheckBobr(bool isHidden)

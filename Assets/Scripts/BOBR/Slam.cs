@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Slam : MonoBehaviour
 {
@@ -14,9 +15,24 @@ public class Slam : MonoBehaviour
 
     public CapsuleCollider bobrCollider;
 
+    public Text slamIndicator;
+
+    private void Start()
+    {
+        slamIndicator.color = Color.white;
+    }
 
     void Update()
     {
+        if (enemyCollider != null)
+        {
+            slamIndicator.color = Color.yellow;
+        }
+        else
+        {
+            slamIndicator.color = Color.white;
+        }
+
         // Проверяем нажатие левой кнопки мыши
         if (Input.GetMouseButtonDown(0) && Time.time >= lastAttackTime + cooldownDuration) // 0 — это левая кнопка мыши
         {
